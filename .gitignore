@@ -1,0 +1,19 @@
+## Build output
+bin/
+obj/
+*.nupkg
+
+## IDE / user files
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.DotSettings.user
+
+## Per-machine settings
+Local.props
+
+## OS
+.DS_Store
+Thumbs.db

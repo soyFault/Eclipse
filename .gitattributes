@@ -1,0 +1,9 @@
+# Normalise text files to LF in the repo so diffs stay clean between Windows (home PC) and Linux.
+* text=auto eol=lf
+
+# Binary assets: never touch line endings.
+*.bundle binary
+*.png binary
+*.ogg binary
+*.wav binary
+*.dll binary

@@ -1,0 +1,4 @@
+[submodule "GitSubmodules/MiraAPI"]
+	path = GitSubmodules/MiraAPI
+	url = https://github.com/All-Of-Us-Mods/MiraAPI
+	branch = dev

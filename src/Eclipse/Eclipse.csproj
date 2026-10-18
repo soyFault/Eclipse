@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Eclipse</RootNamespace>
+    <AssemblyName>Eclipse</AssemblyName>
+    <Description>Eclipse, un mod de Among Us sobre Mira API.</Description>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Version>$(VersionPrefix)-$(VersionSuffix)</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\GitSubmodules\MiraAPI\MiraAPI\MiraAPI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\**\*.*" />
+    <EmbeddedResource Remove="Resources\**\.gitkeep" />
+  </ItemGroup>
+
+  <Import Project="..\..\build\AmongUs.props" />
+
+  <Target Name="CopyToGame" AfterTargets="Build" Condition="'$(AmongUs)' != ''">
+    <Copy SourceFiles="$(TargetPath);$(OutDir)MiraAPI.dll" DestinationFolder="$(AmongUs)/BepInEx/plugins/" />
+  </Target>
+</Project>
