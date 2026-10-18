@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  push:
+    branches: [main, eclipse]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Build (librerias de Steam)
+        run: dotnet build Eclipse.sln -c Release
+
+      - name: Comprobacion de compilacion con las librerias de Android
+        run: dotnet build src/Eclipse/Eclipse.csproj -c Release -p:AmongUsPlatform=Android
