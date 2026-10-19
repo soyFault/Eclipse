@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using Eclipse.Core;
 using Eclipse.Networking;
-using Eclipse.Options;
-using Eclipse.Roles;
+using Eclipse.Options.Roles.Crewmate;
 using Eclipse.Roles.Crewmate.Investigative;
 using MiraAPI.Events;
 using MiraAPI.Events.Mira;

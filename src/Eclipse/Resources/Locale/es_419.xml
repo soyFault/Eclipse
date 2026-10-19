@@ -70,4 +70,32 @@ Si es muy cerca, verás el color de quien la usó.</string>
   <string name="Eclipse.Option.Aurial.AuraInnerRadius">Rango del color</string>
   <string name="Eclipse.Option.Aurial.AuraOuterRadius">Alcance máximo</string>
   <string name="Eclipse.Option.Aurial.SenseDuration">Duración del sentido</string>
+  <!-- Sheriff -->
+  <string name="Eclipse.Role.Sheriff">Sheriff</string>
+  <string name="Eclipse.Button.SheriffShoot">Disparar</string>
+  <string name="Eclipse.Role.Sheriff.IntroBlurb">Dispara a los culpables, pero perdona a los inocentes.</string>
+  <string name="Eclipse.Role.Sheriff.MedDescription">Dispara a los Impostores y a los Neutrales peligrosos.
+    Un disparo equivocado es un fallo.</string>
+  <string name="Eclipse.Role.Sheriff.TabDescription">Dispara a los Impostores. Si le das a un inocente es un fallo y pierdes tu habilidad.</string>
+  <string name="Eclipse.Role.Sheriff.WikiDescription">El Sheriff es un Tripulante con un arma. Disparar a un Impostor lo mata. Disparar a un inocente es un fallo: muere el Sheriff, el objetivo, ambos o nadie (es un ajuste), y el Sheriff no puede volver a disparar. Los roles Neutrales pueden ser objetivos válidos según su tipo.</string>
+  <string name="Eclipse.Role.Sheriff.MisfireFeedback">¡Fallaste el disparo!</string>
+  <string name="Eclipse.Role.Sheriff.TabMisfired">Ya no puedes disparar.</string>
+  <string name="Eclipse.Role.Sheriff.TabMisfireKillsSheriff">Un disparo fallido hará que te suicides.</string>
+  <string name="Eclipse.Role.Sheriff.TabMisfireKillsTarget">Un disparo fallido matará a tu objetivo, pero perderás tu habilidad.</string>
+  <string name="Eclipse.Role.Sheriff.TabMisfireKillsBoth">Un disparo fallido te mata a ti y a tu objetivo.</string>
+  <string name="Eclipse.Role.Sheriff.TabMisfireKillsNobody">Un disparo fallido evitará que vuelvas a disparar.</string>
+<!-- Opciones del Sheriff-->
+  <string name="Eclipse.Option.Sheriff.FirstRoundUse">Permitir disparar en la primera ronda</string>
+  <string name="Eclipse.Option.Sheriff.CanSelfReport">El Sheriff puede reportar sus propios cuerpos</string>
+  <string name="Eclipse.Option.Sheriff.CommsDisables">Comms desactiva al Sheriff</string>
+  <string name="Eclipse.Option.Sheriff.KillCooldown">Enfriamiento del disparo del Sheriff</string>
+  <string name="Eclipse.Option.Sheriff.ShootNeutralBenign">El Sheriff puede disparar a roles Neutrales Benignos</string>
+  <string name="Eclipse.Option.Sheriff.ShootNeutralEvil">El Sheriff puede disparar a roles Neutrales Malvados</string>
+  <string name="Eclipse.Option.Sheriff.ShootNeutralKilling">El Sheriff puede disparar a roles Neutrales Asesinos</string>
+  <string name="Eclipse.Option.Sheriff.ShootNeutralOutlier">El Sheriff puede disparar a roles Neutrales Atípicos</string>
+  <string name="Eclipse.Option.Sheriff.MisfireKills">Un fallo mata a</string>
+  <string name="Eclipse.Option.Sheriff.MisfireKills.Sheriff">El Sheriff</string>
+  <string name="Eclipse.Option.Sheriff.MisfireKills.Target">El objetivo</string>
+  <string name="Eclipse.Option.Sheriff.MisfireKills.Both">Ambos</string>
+  <string name="Eclipse.Option.Sheriff.MisfireKills.Nobody">Nadie</string>
 </resources>

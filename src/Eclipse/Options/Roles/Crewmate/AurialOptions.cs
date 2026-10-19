@@ -3,7 +3,7 @@ using MiraAPI.GameOptions;
 using MiraAPI.GameOptions.Attributes;
 using MiraAPI.Utilities;
 
-namespace Eclipse.Options;
+namespace Eclipse.Options.Roles.Crewmate;
 
 internal sealed class AurialOptions : AbstractRoleOptionGroup<AurialRole>
 {

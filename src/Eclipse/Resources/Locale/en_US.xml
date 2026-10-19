@@ -64,4 +64,32 @@ If done very close, you can see the source's color.</string>
   <string name="Eclipse.Option.Aurial.AuraInnerRadius">Radiate Color Range</string>
   <string name="Eclipse.Option.Aurial.AuraOuterRadius">Radiate Max Range</string>
   <string name="Eclipse.Option.Aurial.SenseDuration">Sense Duration</string>
+ <!-- Sheriff -->
+  <string name="Eclipse.Role.Sheriff">Sheriff</string>
+  <string name="Eclipse.Button.SheriffShoot">Shoot</string>
+  <string name="Eclipse.Role.Sheriff.IntroBlurb">Shoot the evildoers, but spare the innocent.</string>
+  <string name="Eclipse.Role.Sheriff.MedDescription">Shoot Impostors and dangerous Neutrals.
+    A wrong shot is a misfire.</string>
+  <string name="Eclipse.Role.Sheriff.TabDescription">Shoot the Impostors. If you hit an innocent player it is a misfire and you lose your ability.</string>
+  <string name="Eclipse.Role.Sheriff.WikiDescription">The Sheriff is a Crewmate with a gun. Shooting an Impostor kills them. Shooting an innocent player is a misfire: the Sheriff, the target, both or nobody dies (a setting), and the Sheriff cannot shoot again. Neutral roles can be valid targets depending on their kind.</string>
+  <string name="Eclipse.Role.Sheriff.MisfireFeedback">You misfired!</string>
+  <string name="Eclipse.Role.Sheriff.TabMisfired">You can no longer shoot.</string>
+  <string name="Eclipse.Role.Sheriff.TabMisfireKillsSheriff">Misfiring will lead to suicide.</string>
+  <string name="Eclipse.Role.Sheriff.TabMisfireKillsTarget">Misfiring will lead to your target's death, at the cost of your ability.</string>
+  <string name="Eclipse.Role.Sheriff.TabMisfireKillsBoth">Misfiring kills you and your target.</string>
+  <string name="Eclipse.Role.Sheriff.TabMisfireKillsNobody">Misfiring will prevent you from shooting again.</string>
+<!-- Sheriff Options -->
+  <string name="Eclipse.Option.Sheriff.FirstRoundUse">Allow shooting in the first round</string>
+  <string name="Eclipse.Option.Sheriff.CanSelfReport">Sheriff can report their own bodies</string>
+  <string name="Eclipse.Option.Sheriff.CommsDisables">Comms disables the Sheriff</string>
+  <string name="Eclipse.Option.Sheriff.KillCooldown">Sheriff shoot cooldown</string>
+  <string name="Eclipse.Option.Sheriff.ShootNeutralBenign">Sheriff can shoot Neutral Benign roles</string>
+  <string name="Eclipse.Option.Sheriff.ShootNeutralEvil">Sheriff can shoot Neutral Evil roles</string>
+  <string name="Eclipse.Option.Sheriff.ShootNeutralKilling">Sheriff can shoot Neutral Killing roles</string>
+  <string name="Eclipse.Option.Sheriff.ShootNeutralOutlier">Sheriff can shoot Neutral Outlier roles</string>
+  <string name="Eclipse.Option.Sheriff.MisfireKills">A misfire kills</string>
+  <string name="Eclipse.Option.Sheriff.MisfireKills.Sheriff">The Sheriff</string>
+  <string name="Eclipse.Option.Sheriff.MisfireKills.Target">The target</string>
+  <string name="Eclipse.Option.Sheriff.MisfireKills.Both">Both</string>
+  <string name="Eclipse.Option.Sheriff.MisfireKills.Nobody">Nobody</string>
 </resources>
