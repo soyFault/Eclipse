@@ -1,4 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <!-- Local settings -->
+  <string name="Eclipse.Local.Players">Players</string>
+  <string name="Eclipse.Local.Section.Visuals">Visuals</string>
+  <string name="Eclipse.Local.RoleNameStyle">Role name style</string>
+  <string name="Eclipse.Local.NameStyleTop">Top</string>
+  <string name="Eclipse.Local.NameStyleTopSmall">Top (small)</string>
+  <string name="Eclipse.Local.NameStyleBottom">Bottom</string>
+  <string name="Eclipse.Local.NameStyleBottomSmall">Bottom (small)</string>
+  <string name="Eclipse.Local.ShowRoleIcons">Show role icons on player names</string>
+  <string name="Eclipse.Local.ColorPlayerNames">Color player names with their role's color</string>
+  <!-- Alignments -->
+  <string name="Eclipse.Alignment.CrewInvestigative">Crewmate Investigative</string>
+  <string name="Eclipse.Alignment.CrewInvestigative.Group">Crewmate Investigative Roles</string>
+  <string name="Eclipse.Alignment.CrewKilling">Crewmate Killing</string>
+  <string name="Eclipse.Alignment.CrewKilling.Group">Crewmate Killing Roles</string>
+  <string name="Eclipse.Alignment.CrewProtective">Crewmate Protective</string>
+  <string name="Eclipse.Alignment.CrewProtective.Group">Crewmate Protective Roles</string>
+  <string name="Eclipse.Alignment.CrewPower">Crewmate Power</string>
+  <string name="Eclipse.Alignment.CrewPower.Group">Crewmate Power Roles</string>
+  <string name="Eclipse.Alignment.CrewSupport">Crewmate Support</string>
+  <string name="Eclipse.Alignment.CrewSupport.Group">Crewmate Support Roles</string>
+  <string name="Eclipse.Alignment.CrewAfterlife">Crewmate Afterlife</string>
+  <string name="Eclipse.Alignment.CrewAfterlife.Group">Crewmate Afterlife Roles</string>
+  <string name="Eclipse.Alignment.CrewGhost">Crewmate Ghost</string>
+  <string name="Eclipse.Alignment.CrewGhost.Group">Crewmate Ghost Roles</string>
 
+  <string name="Eclipse.Alignment.ImpConcealing">Impostor Concealing</string>
+  <string name="Eclipse.Alignment.ImpConcealing.Group">Impostor Concealing Roles</string>
+  <string name="Eclipse.Alignment.ImpKilling">Impostor Killing</string>
+  <string name="Eclipse.Alignment.ImpKilling.Group">Impostor Killing Roles</string>
+  <string name="Eclipse.Alignment.ImpPower">Impostor Power</string>
+  <string name="Eclipse.Alignment.ImpPower.Group">Impostor Power Roles</string>
+  <string name="Eclipse.Alignment.ImpSupport">Impostor Support</string>
+  <string name="Eclipse.Alignment.ImpSupport.Group">Impostor Support Roles</string>
+  <string name="Eclipse.Alignment.ImpAfterlife">Impostor Afterlife</string>
+  <string name="Eclipse.Alignment.ImpAfterlife.Group">Impostor Afterlife Roles</string>
+  <string name="Eclipse.Alignment.ImpGhost">Impostor Ghost</string>
+  <string name="Eclipse.Alignment.ImpGhost.Group">Impostor Ghost Roles</string>
+
+  <string name="Eclipse.Alignment.NeutralBenign">Neutral Benign</string>
+  <string name="Eclipse.Alignment.NeutralBenign.Group">Neutral Benign Roles</string>
+  <string name="Eclipse.Alignment.NeutralEvil">Neutral Evil</string>
+  <string name="Eclipse.Alignment.NeutralEvil.Group">Neutral Evil Roles</string>
+  <string name="Eclipse.Alignment.NeutralKilling">Neutral Killing</string>
+  <string name="Eclipse.Alignment.NeutralKilling.Group">Neutral Killing Roles</string>
+  <string name="Eclipse.Alignment.NeutralOutlier">Neutral Outlier</string>
+  <string name="Eclipse.Alignment.NeutralOutlier.Group">Neutral Outlier Roles</string>
+  <string name="Eclipse.Alignment.NeutralAfterlife">Neutral Afterlife</string>
+  <string name="Eclipse.Alignment.NeutralAfterlife.Group">Neutral Afterlife Roles</string>
+  <string name="Eclipse.Alignment.NeutralGhost">Neutral Ghost</string>
+  <string name="Eclipse.Alignment.NeutralGhost.Group">Neutral Ghost Roles</string>
+<!-- Freeplay Tools-->
+  <string name="Eclipse.Freeplay.UseAbility">Use Ability</string>
+<!-- Aurial -->
+  <string name="Eclipse.Role.Aurial">Aurial</string>
+  <string name="Eclipse.Role.Aurial.IntroBlurb">Sense disturbances in your aura.</string>
+  <string name="Eclipse.Role.Aurial.MedDescription">Feel where exactly abilities are used in your area.
+If done very close, you can see the source's color.</string>
+  <string name="Eclipse.Role.Aurial.TabDescription">Any player abilities used within your aura you will sense</string>
+  <string name="Eclipse.Role.Aurial.WikiDescription">The Aurial is a Crewmate Investigative role that will be alerted whenever a player near them uses one of their abilities.</string>
+<!--Aurial Settings -->
+  <string name="Eclipse.Option.Aurial.AuraInnerRadius">Radiate Color Range</string>
+  <string name="Eclipse.Option.Aurial.AuraOuterRadius">Radiate Max Range</string>
+  <string name="Eclipse.Option.Aurial.SenseDuration">Sense Duration</string>
 </resources>

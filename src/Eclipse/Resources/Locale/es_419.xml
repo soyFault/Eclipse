@@ -1,4 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <!-- Ajustes locales (solo para la partida de este jugador) -->
+  <string name="Eclipse.Local.Players">Jugadores</string>
+  <string name="Eclipse.Local.Section.Visuals">Apariencia</string>
+  <string name="Eclipse.Local.RoleNameStyle">Estilo del nombre del rol</string>
+  <string name="Eclipse.Local.NameStyleTop">Arriba</string>
+  <string name="Eclipse.Local.NameStyleTopSmall">Arriba (pequeño)</string>
+  <string name="Eclipse.Local.NameStyleBottom">Abajo</string>
+  <string name="Eclipse.Local.NameStyleBottomSmall">Abajo (pequeño)</string>
+  <string name="Eclipse.Local.ShowRoleIcons">Mostrar el ícono del rol junto al nombre</string>
+  <string name="Eclipse.Local.ColorPlayerNames">Colorear nombres con el color de rol</string>
+  <!-- Alineaciones -->
+  <string name="Eclipse.Alignment.CrewInvestigative">Tripulante Investigativo</string>
+  <string name="Eclipse.Alignment.CrewInvestigative.Group">Tripulantes Investigativos</string>
+  <string name="Eclipse.Alignment.CrewKilling">Tripulante Asesino</string>
+  <string name="Eclipse.Alignment.CrewKilling.Group">Tripulantes Asesinos</string>
+  <string name="Eclipse.Alignment.CrewProtective">Tripulante Protector</string>
+  <string name="Eclipse.Alignment.CrewProtective.Group">Tripulantes Protectores</string>
+  <string name="Eclipse.Alignment.CrewPower">Tripulante Poderoso</string>
+  <string name="Eclipse.Alignment.CrewPower.Group">Tripulantes Poderosos</string>
+  <string name="Eclipse.Alignment.CrewSupport">Tripulante de Apoyo</string>
+  <string name="Eclipse.Alignment.CrewSupport.Group">Tripulantes de Apoyo</string>
+  <string name="Eclipse.Alignment.CrewAfterlife">Tripulante del Más Allá</string>
+  <string name="Eclipse.Alignment.CrewAfterlife.Group">Tripulantes del Más Allá</string>
+  <string name="Eclipse.Alignment.CrewGhost">Tripulante Fantasma</string>
+  <string name="Eclipse.Alignment.CrewGhost.Group">Tripulantes Fantasma</string>
 
+  <string name="Eclipse.Alignment.ImpConcealing">Impostor Encubridor</string>
+  <string name="Eclipse.Alignment.ImpConcealing.Group">Impostores Encubridores</string>
+  <string name="Eclipse.Alignment.ImpKilling">Impostor Asesino</string>
+  <string name="Eclipse.Alignment.ImpKilling.Group">Impostores Asesinos</string>
+  <string name="Eclipse.Alignment.ImpPower">Impostor Poderoso</string>
+  <string name="Eclipse.Alignment.ImpPower.Group">Impostores Poderosos</string>
+  <string name="Eclipse.Alignment.ImpSupport">Impostor de Apoyo</string>
+  <string name="Eclipse.Alignment.ImpSupport.Group">Impostores de Apoyo</string>
+  <string name="Eclipse.Alignment.ImpAfterlife">Impostor del Más Allá</string>
+  <string name="Eclipse.Alignment.ImpAfterlife.Group">Impostores del Más Allá</string>
+  <string name="Eclipse.Alignment.ImpGhost">Impostor Fantasma</string>
+  <string name="Eclipse.Alignment.ImpGhost.Group">Impostores Fantasma</string>
+
+  <string name="Eclipse.Alignment.NeutralBenign">Neutral Benigno</string>
+  <string name="Eclipse.Alignment.NeutralBenign.Group">Neutrales Benignos</string>
+  <string name="Eclipse.Alignment.NeutralEvil">Neutral Malvado</string>
+  <string name="Eclipse.Alignment.NeutralEvil.Group">Neutrales Malvados</string>
+  <string name="Eclipse.Alignment.NeutralKilling">Neutral Asesino</string>
+  <string name="Eclipse.Alignment.NeutralKilling.Group">Neutrales Asesinos</string>
+  <string name="Eclipse.Alignment.NeutralOutlier">Neutral Atípico</string>
+  <string name="Eclipse.Alignment.NeutralOutlier.Group">Neutrales Atípicos</string>
+  <string name="Eclipse.Alignment.NeutralAfterlife">Neutral del Más Allá</string>
+  <string name="Eclipse.Alignment.NeutralAfterlife.Group">Neutrales del Más Allá</string>
+  <string name="Eclipse.Alignment.NeutralGhost">Neutral Fantasma</string>
+  <string name="Eclipse.Alignment.NeutralGhost.Group">Neutrales Fantasma</string>
+  <!-- Herramientas de Freeplay-->
+  <string name="Eclipse.Freeplay.SetRole">Asignar rol</string>
+  <string name="Eclipse.Freeplay.GiveShield">Dar escudo</string>
+  <string name="Eclipse.Freeplay.NoMedic">Primero dale el rol de Médico a alguien (Asignar rol).</string>
+  <string name="Eclipse.Freeplay.Attack">Hacer atacar</string>
+  <string name="Eclipse.Freeplay.UseAbility">Usar Habilidad</string>
+  <string name="Eclipse.Freeplay.Reset">Reiniciar partida</string>
+  <string name="Eclipse.Freeplay.ResetPopup">Partida reiniciada. Todos revivieron y conservan su rol.</string>
+  <!-- Sensorial -->
+  <string name="Eclipse.Role.Aurial">Sensorial</string>
+  <string name="Eclipse.Role.Aurial.IntroBlurb">Siente las perturbaciones en tu aura.</string>
+  <string name="Eclipse.Role.Aurial.MedDescription">Siente dónde se usan habilidades en tu zona.
+Si es muy cerca, verás el color de quien la usó.</string>
+  <string name="Eclipse.Role.Aurial.TabDescription">Percibirás cualquier habilidad que se use dentro de tu aura</string>
+  <string name="Eclipse.Role.Aurial.WikiDescription">El Sensorial es un rol de tripulante investigativo al que se avisa cuando un jugador cercano usa una habilidad.</string>
+<!-- Ajustes del Sensorial  -->
+  <string name="Eclipse.Option.Aurial.AuraInnerRadius">Rango del color</string>
+  <string name="Eclipse.Option.Aurial.AuraOuterRadius">Alcance máximo</string>
+  <string name="Eclipse.Option.Aurial.SenseDuration">Duración del sentido</string>
 </resources>

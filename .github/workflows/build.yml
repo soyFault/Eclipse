@@ -22,3 +22,4 @@ jobs:
 
       - name: Comprobacion de compilacion con las librerias de Android
         run: dotnet build src/Eclipse/Eclipse.csproj -c Release -p:AmongUsPlatform=Android
+

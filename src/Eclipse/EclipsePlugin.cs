@@ -1,6 +1,8 @@
 using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
+using Eclipse.Assets;
+using Eclipse.Api.Alignments;
 using HarmonyLib;
 using MiraAPI;
 using MiraAPI.PluginLoading;
@@ -35,9 +37,9 @@ public partial class EclipsePlugin : BasePlugin, IMiraPlugin
     public override void Load()
     {
         MiraLocaleManager.Register(Id, "Eclipse");
-
+        BuiltInAlignments.RegisterAll();
         Harmony.PatchAll();
-
         Log.LogInfo($"{Name} {Version} cargado.");
+        EclipseBundle.Report();
     }
 }

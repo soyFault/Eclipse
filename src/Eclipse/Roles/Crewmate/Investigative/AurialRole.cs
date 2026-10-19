@@ -1,17 +1,26 @@
+using Eclipse.Api.Alignments;
+using Eclipse.Api.Roles;
+using Eclipse.Assets;
+using Eclipse.Colors;
+using Il2CppInterop.Runtime.Attributes;
 using MiraAPI.Roles;
 using UnityEngine;
 
-namespace Eclipse.Roles.Crewmate;
+namespace Eclipse.Roles.Crewmate.Investigative;
 
-internal sealed class AurialRole : CrewmateRole, ICustomRole
+internal sealed class AurialRole : CrewmateRole, IEclipseRole
 {
     public string IdPrefix => "Eclipse.Role";
 
     public string IdPart => "Aurial";
+    public Color RoleColor => EclipseColors.Aurial;
 
-    public Color RoleColor => new Color32(120, 200, 255, 255);
+    [HideFromIl2Cpp]
+    public AlignmentDefinition Alignment => BuiltInAlignments.CrewInvestigative;
 
-    public ModdedRoleTeams Team => ModdedRoleTeams.Crewmate;
-
-    public CustomRoleConfiguration Configuration => new(this);
+    public CustomRoleConfiguration Configuration => new(this)
+    {
+        Icon = EclipseAssets.RoleIcon(IdPart),
+        IconTmp = EclipseAssets.RoleIconTmp(IdPart)!,
+    };
 }
