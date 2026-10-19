@@ -18,7 +18,7 @@ internal sealed class FreeplayAttackButton : EclipseActionButton
     public override ButtonLocation Location => ButtonLocation.BottomLeft;
 
 
-    public override LoadableAsset<Sprite> Sprite => EclipseAssets.ButtonIcon("FreeplayAttack", MiraAssets.CrewmateFile);
+    public override LoadableAsset<Sprite> Sprite => EclipseAssets.FreeplayIcon("FreeplayAttack", MiraAssets.CrewmateFile);
 
     public override bool Enabled(RoleBehaviour? role)
     {
