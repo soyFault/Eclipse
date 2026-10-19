@@ -55,7 +55,7 @@ internal sealed class SheriffShootButton : EclipsePlayerButton<SheriffRole>, IKi
         if (outcome.IsMisfire)
         {
             // Applies here first and then reaches every other client: the match rules need to know on all of them.
-            EclipseRpcs.RpcSheriffMisfired(shooter);
+            SheriffRpcs.RpcSheriffMisfired(shooter);
         }
 
         // Order matters: the target is killed while the Sheriff is still alive, then the Sheriff (if the setting says so).

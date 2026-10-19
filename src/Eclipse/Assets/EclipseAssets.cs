@@ -93,4 +93,15 @@ internal static class EclipseAssets
             return LoadedAsset ??= EclipseBundle.Find<Sprite>(folder, key) ?? throw new InvalidOperationException($"INVALID ASSET: {folder}/{key}");
         }
     }
+
+    public static LoadableAsset<Sprite> SpriteIcon(string key, LoadableAsset<Sprite> placeholder)
+    {
+        if (!ButtonIcons.TryGetValue("sprites/" + key, out var icon))
+        {
+            icon = EclipseBundle.Has(BundleArt.SpritesFolder, key) ? new BundleSprite(BundleArt.SpritesFolder, key) : placeholder;
+            ButtonIcons["sprites/" + key] = icon;
+        }
+
+        return icon;
+    }
 }
