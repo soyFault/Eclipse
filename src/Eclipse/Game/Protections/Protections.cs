@@ -1,0 +1,168 @@
+using System.Collections.Generic;
+using System.Linq;
+using Eclipse.Assets;
+using Eclipse.Colors;
+using Eclipse.Core;
+using Eclipse.Options.Roles.Crewmate;
+using MiraAPI.GameOptions;
+using PowerTools;
+using UnityEngine;
+
+namespace Eclipse.Game;
+
+internal static class Protections
+{
+    // Where the barrier sits, in the player's cosmetics layer (TOUM's AnimStore.SpawnAnimBody(player, prefab, false, -1.1, -0.35, 1.5): y is -0.35 + 0.05
+    // of the bounce holder, and z is the depth).
+    private const float BarrierY = -0.30f;
+    private const float BarrierZ = 1.5f;
+    private const float BarrierSpeed = 0.75f;
+    private const string BarrierPrefab = "WardenFort";
+
+    private static readonly Dictionary<(ProtectionKind, byte, byte), Visual> Visuals = [];
+
+    public static ProtectionLedger Ledger { get; } = new();
+
+    public static double Now => Time.timeAsDouble;
+
+    // Finds the protection that stops source from interacting with target right now.
+    public static Protection? Blocker(PlayerControl source, PlayerControl target, bool ignoresDefense)
+    {
+        var blocker = Ledger.BlockerOf(target.PlayerId, Now);
+        var blocks = ShieldRules.Blocks(blocker != null, source.PlayerId, target.PlayerId, ignoresDefense, MeetingHud.Instance || ExileController.Instance);
+        return blocks ? blocker : null;
+    }
+
+    // A message from the game that decided it: the attacker and the protector see a flash, and an attacker stopped on a murder recovers their kill state.
+    public static void OnBlocked(ProtectionKind kind, PlayerControl source, PlayerControl protector, bool wasAttack)
+    {
+        if (source.AmOwner || protector.AmOwner)
+        {
+            ScreenFlash.Flash(ColorOf(kind));
+        }
+
+        if (source.AmOwner && wasAttack)
+        {
+            ShieldGuard.ResetStoppedAttacker(source);
+        }
+    }
+
+    public static void Reset()
+    {
+        Ledger.Clear();
+        SyncVisuals();
+    }
+
+    // Registered as a local tick: forgets what ran out and keeps what is drawn on the protected players up to date.
+    public static void Tick(float deltaTime)
+    {
+        Ledger.Prune(Now);
+        SyncVisuals();
+    }
+
+    private static Color ColorOf(ProtectionKind kind)
+    {
+        return EclipseColors.Warden;
+    }
+
+    private static void SyncVisuals()
+    {
+        var local = PlayerControl.LocalPlayer;
+        var wanted = new HashSet<(ProtectionKind, byte, byte)>();
+        if (local != null && local.Data != null && MeetingHud.Instance == null)
+        {
+            var dead = local.Data.IsDead;
+            foreach (var p in Ledger.Active(ProtectionKind.Fortify, Now))
+            {
+                var shows = ProtectionRules.ShowsFortify(
+                    OptionGroupSingleton<WardenOptions>.Instance.ShowFortified,
+                    local.PlayerId == p.TargetId,
+                    local.PlayerId == p.ProtectorId,
+                    dead);
+                if (shows)
+                {
+                    wanted.Add((p.Kind, p.ProtectorId, p.TargetId));
+                }
+            }
+        }
+
+        foreach (var key in Visuals.Keys.Where(k => !wanted.Contains(k)).ToList())
+        {
+            Visuals[key].Destroy();
+            Visuals.Remove(key);
+        }
+
+        foreach (var key in wanted)
+        {
+            var player = GameData.Instance.GetPlayerById(key.Item3)?.Object;
+            if (player == null)
+            {
+                continue;
+            }
+
+            if (!Visuals.TryGetValue(key, out var visual) || visual.IsGone)
+            {
+                visual = Visual.Create(player);
+                Visuals[key] = visual;
+            }
+
+            // The barrier must not give away a hidden player: it goes away with them (in a vent, invisible) and when they die.
+            visual.Update(player, !player.inVent && player.Visible && !player.Data.IsDead);
+        }
+    }
+
+    private sealed class Visual(GameObject? holder, SpriteRenderer[] renderers)
+    {
+        public bool IsGone => holder == null && renderers.Length > 0;
+
+        public static Visual Create(PlayerControl player)
+        {
+            var prefab = EclipseBundle.Find<GameObject>(BundleArt.PrefabsFolder, BarrierPrefab);
+            if (prefab == null)
+            {
+                return new Visual(null, []);
+            }
+
+            // Like TOUM: born under the player with the prefab's own scale, then hung from a holder in the cosmetics layer so it is drawn with the body.
+            var barrier = Object.Instantiate(prefab, player.transform);
+            barrier.name = "EclipseWardenFort";
+            var playerScale = player.transform.localScale;
+            barrier.transform.localScale = new Vector3(prefab.transform.localScale.x / playerScale.x, prefab.transform.localScale.y / playerScale.y, 1f);
+
+            var holder = new GameObject("A_EclipseWardenFort");
+            holder.transform.SetParent(player.cosmetics.transform, false);
+            holder.transform.localPosition = new Vector3(0f, BarrierY, BarrierZ);
+            barrier.transform.SetParent(holder.transform, true);
+
+            foreach (var animation in barrier.GetComponentsInChildren<SpriteAnim>(true))
+            {
+                animation.SetSpeed(BarrierSpeed);
+            }
+
+            return new Visual(holder, barrier.GetComponentsInChildren<SpriteRenderer>(true));
+        }
+
+        public void Update(PlayerControl player, bool visible)
+        {
+            if (holder == null)
+            {
+                return;
+            }
+
+            holder.SetActive(visible);
+            var flip = player.cosmetics.FlipX;
+            foreach (var renderer in renderers)
+            {
+                renderer.flipX = flip;
+            }
+        }
+
+        public void Destroy()
+        {
+            if (holder != null)
+            {
+                Object.Destroy(holder);
+            }
+        }
+    }
+}

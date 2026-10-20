@@ -204,4 +204,20 @@ If done very close, you can see the source's color.</string>
   <string name="Eclipse.Role.Snitch.ImpostorCompleted">The Snitch knows what you are now!</string>
   <string name="Eclipse.Option.Snitch.SeesImpostorsInMeetings">Snitch sees impostors in meetings</string>
   <string name="Eclipse.Option.Snitch.TasksRemainingWhenRevealed">Tasks remaining when revealed</string>
+
+  <!-- Warden -->
+  <string name="Eclipse.Role.Warden">Warden</string>
+  <string name="Eclipse.Role.Warden.IntroBlurb">Fortify Crewmates</string>
+  <string name="Eclipse.Role.Warden.MedDescription">Fortify Crewmates to prevent any interactions with them outside of meetings.</string>
+  <string name="Eclipse.Role.Warden.TabDescription">Fortify crewmates to prevent interactions with them</string>
+  <string name="Eclipse.Role.Warden.TabProtecting">Fortifying: &lt;player&gt;</string>
+  <string name="Eclipse.Role.Warden.WikiDescription">The Warden is a Crewmate Protective role that can fortify players to prevent them from being interacted with. </string>
+  <string name="Eclipse.Button.WardenFortify">Fortify</string>
+  <string name="Eclipse.Option.Warden.ShowFortified">Show Fortified Player</string>
+  <string name="Eclipse.Option.Warden.ShowFortified.Self">Fortified</string>
+  <string name="Eclipse.Option.Warden.ShowFortified.Warden">Warden</string>
+  <string name="Eclipse.Option.Warden.ShowFortified.SelfAndWarden">Fortified + Warden</string>
+  <string name="Eclipse.Option.Warden.ShowFortified.Everyone">Everyone</string>
+
+
 </resources>

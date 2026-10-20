@@ -200,4 +200,20 @@ Si es muy cerca, verás el color de quien la usó.</string>
   <string name="Eclipse.Role.Snitch.ImpostorCompleted">¡El Soplón ya sabe lo que eres!</string>
   <string name="Eclipse.Option.Snitch.SeesImpostorsInMeetings">El Soplón ve a los impostores en las reuniones</string>
   <string name="Eclipse.Option.Snitch.TasksRemainingWhenRevealed">Tareas restantes al revelarse</string>
+
+  <!-- Warden -->
+  <string name="Eclipse.Role.Warden">Guardián</string>
+  <string name="Eclipse.Role.Warden.IntroBlurb">Fortifica a los Tripulantes</string>
+  <string name="Eclipse.Role.Warden.MedDescription">Fortifica Tripulantes para impedir interacciones fuera de las reuniones.</string>
+  <string name="Eclipse.Role.Warden.TabDescription">Fortifica a los Tripulantes para evitar[nl]que interactúen con ellos.</string>
+  <string name="Eclipse.Role.Warden.TabProtecting">Fortificando a: &lt;player&gt;</string>
+  <string name="Eclipse.Role.Warden.WikiDescription">El Guardián es un Tripulante de Protección que puede fortificar a otros jugadores para evitar que interactúen con ellos. </string>
+  <string name="Eclipse.Button.WardenFortify">Fortificar</string>
+  <string name="Eclipse.Option.Warden.ShowFortified">Mostrar jugador fortificado</string>
+  <string name="Eclipse.Option.Warden.ShowFortified.Self">Fortificado</string>
+  <string name="Eclipse.Option.Warden.ShowFortified.Warden">Guardián</string>
+  <string name="Eclipse.Option.Warden.ShowFortified.SelfAndWarden">Fortificado + Guardián</string>
+  <string name="Eclipse.Option.Warden.ShowFortified.Everyone">Todos</string>
+
+
 </resources>

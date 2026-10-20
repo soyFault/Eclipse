@@ -35,6 +35,7 @@ public partial class EclipsePlugin : BasePlugin, IMiraPlugin
         MiraLocaleManager.Register(Id, "Eclipse");
         BuiltInAlignments.RegisterAll();
         Harmony.PatchAll();
+        LocalTick.Register(Protections.Tick);
         RoleLabels.RegisterReveal(SnitchEvents.SnitchRoleIsPublic);
         NameColors.Register(SnitchEvents.NameColor);
         LocalTick.Register(SnitchEvents.Tick);
