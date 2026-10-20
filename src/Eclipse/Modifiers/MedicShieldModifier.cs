@@ -14,9 +14,16 @@ namespace Eclipse.Modifiers;
 
 internal sealed class MedicShieldModifier : BaseModifier
 {
-
     private const float BubbleY = -0.05f;
     private const float BubbleZ = 1.5f;
+
+    // Orbit of the shield around the player (local units of the prefab). Lower OrbitRadiusX = closer to the player at its widest point.
+    private const float OrbitRadiusX = 1.0f;
+    private const float OrbitRadiusY = 0.5f;
+    private const float OrbitCenterY = -0.1f;
+    private const float OrbitSeconds = 3f;
+    private const float ShieldScale = 0.6f;
+    private const float DepthScale = 0.18f;
 
     private readonly ShieldMedics _medics = new();
     private GameObject? _bubble;
@@ -69,6 +76,7 @@ internal sealed class MedicShieldModifier : BaseModifier
         {
             return;
         }
+
         _bubble = Object.Instantiate(prefab, Player.transform);
         _bubble.name = "EclipseMedicShield";
         var playerScale = Player.transform.localScale;
@@ -78,6 +86,10 @@ internal sealed class MedicShieldModifier : BaseModifier
         holder.transform.localPosition = new Vector3(0f, BubbleY, BubbleZ);
         _bubble.transform.SetParent(holder.transform, true);
         _bubbleRenderers = _bubble.GetComponentsInChildren<SpriteRenderer>(true);
+
+        // The aura (MedicShieldBack) animates itself with the game's SpriteAnim. The shield is moved by FixedUpdate below.
+        _shield = _bubble.transform.Find("MedicShieldOrbit/Shield");
+
         _bubble.SetActive(ShowsBubble());
     }
 
@@ -91,6 +103,7 @@ internal sealed class MedicShieldModifier : BaseModifier
 
         _bubble = null;
         _bubbleRenderers = [];
+        _shield = null;
     }
 
     private bool ShowsBubble()
@@ -115,12 +128,12 @@ internal sealed class MedicShieldModifier : BaseModifier
 
         if (_bubble != null && !MeetingHud.Instance)
         {
-
             if (_shield != null)
             {
-                var angle = Time.time * (2f * Mathf.PI / 3f);
-                _shield.localPosition = new Vector3(1.45f * Mathf.Cos(angle), -0.1f + 0.5f * Mathf.Sin(angle), Mathf.Sin(angle) > 0f ? 0.00006f : -0.00005f);
-                var scale = 0.6f * (1f - 0.18f * Mathf.Sin(angle));
+                var angle = Time.time * (2f * Mathf.PI / OrbitSeconds);
+                var sin = Mathf.Sin(angle);
+                var scale = ShieldScale * (1f - DepthScale * sin);
+                _shield.localPosition = new Vector3(OrbitRadiusX * Mathf.Cos(angle), OrbitCenterY + OrbitRadiusY * sin, sin > 0f ? 0.00006f : -0.00005f);
                 _shield.localScale = new Vector3(scale, scale, 1f);
             }
 
