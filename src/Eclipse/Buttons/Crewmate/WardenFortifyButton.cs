@@ -28,10 +28,18 @@ internal sealed class WardenFortifyButton : EclipsePlayerButton<WardenRole>
 
     public override Color TextOutlineColor => EclipseColors.Warden;
 
+    private static bool IsFortifying =>
+        Protections.Ledger.TargetsOf(ProtectionKind.Fortify, PlayerControl.LocalPlayer.PlayerId, Protections.Now).Any();
+
     public override bool CanUse()
     {
-        var fortifying = Protections.Ledger.TargetsOf(ProtectionKind.Fortify, PlayerControl.LocalPlayer.PlayerId, Protections.Now).Any();
-        return base.CanUse() && ProtectionRules.CanFortify(fortifying);
+        return base.CanUse() && ProtectionRules.CanFortify(IsFortifying);
+    }
+
+    // Once the Warden is fortifying someone there is nobody to aim at: no target, no outline on the closest player.
+    protected override bool CanTarget(WardenRole role)
+    {
+        return ProtectionRules.CanFortify(IsFortifying);
     }
 
     protected override void OnClick()

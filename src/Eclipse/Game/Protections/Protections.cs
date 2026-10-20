@@ -6,6 +6,7 @@ using Eclipse.Core;
 using Eclipse.Options.Roles.Crewmate;
 using MiraAPI.GameOptions;
 using PowerTools;
+using Reactor.Utilities;
 using UnityEngine;
 
 namespace Eclipse.Game;
@@ -106,13 +107,15 @@ internal static class Protections
                 Visuals[key] = visual;
             }
 
-            // The barrier must not give away a hidden player: it goes away with them (in a vent, invisible) and when they die.
-            visual.Update(player, !player.inVent && player.Visible && !player.Data.IsDead);
+            // The barrier must not give away a hidden player: it goes away with them (in a vent) and when they die.
+            visual.Update(player, !player.inVent && !player.Data.IsDead);
         }
     }
 
     private sealed class Visual(GameObject? holder, SpriteRenderer[] renderers)
     {
+        private bool? _shown;
+
         public bool IsGone => holder == null && renderers.Length > 0;
 
         public static Visual Create(PlayerControl player)
@@ -120,6 +123,7 @@ internal static class Protections
             var prefab = EclipseBundle.Find<GameObject>(BundleArt.PrefabsFolder, BarrierPrefab);
             if (prefab == null)
             {
+                Logger<EclipsePlugin>.Warning($"Protection visual on player {player.PlayerId}: prefab '{BarrierPrefab}' is not in the bundle.");
                 return new Visual(null, []);
             }
 
@@ -137,9 +141,15 @@ internal static class Protections
             foreach (var animation in barrier.GetComponentsInChildren<SpriteAnim>(true))
             {
                 animation.SetSpeed(BarrierSpeed);
+                if (animation.m_defaultAnim == null)
+                {
+                    Logger<EclipsePlugin>.Warning($"Protection visual '{BarrierPrefab}': a SpriteAnim has no animation clip, so nothing will play. Rebuild the prefab and the bundles.");
+                }
             }
 
-            return new Visual(holder, barrier.GetComponentsInChildren<SpriteRenderer>(true));
+            var renderers = barrier.GetComponentsInChildren<SpriteRenderer>(true);
+            Logger<EclipsePlugin>.Info($"Protection visual created on player {player.PlayerId}: {renderers.Length} sprite renderer(s).");
+            return new Visual(holder, renderers);
         }
 
         public void Update(PlayerControl player, bool visible)
@@ -147,6 +157,12 @@ internal static class Protections
             if (holder == null)
             {
                 return;
+            }
+
+            if (_shown != visible)
+            {
+                _shown = visible;
+                Logger<EclipsePlugin>.Info($"Protection visual on player {player.PlayerId}: shown={visible} (inVent={player.inVent}, dead={player.Data.IsDead}).");
             }
 
             holder.SetActive(visible);
