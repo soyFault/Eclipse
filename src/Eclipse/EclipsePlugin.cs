@@ -3,6 +3,7 @@ using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
 using Eclipse.Assets;
 using Eclipse.Api.Alignments;
+using Eclipse.Game;
 using HarmonyLib;
 using MiraAPI;
 using MiraAPI.PluginLoading;
@@ -34,6 +35,7 @@ public partial class EclipsePlugin : BasePlugin, IMiraPlugin
         MiraLocaleManager.Register(Id, "Eclipse");
         BuiltInAlignments.RegisterAll();
         Harmony.PatchAll();
+        LocalTick.Register(Footprints.Tick);
         Log.LogInfo($"{Name} {Version} cargado.");
         EclipseBundle.Report();
     }

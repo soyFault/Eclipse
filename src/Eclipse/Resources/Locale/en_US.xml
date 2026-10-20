@@ -164,4 +164,22 @@ If done very close, you can see the source's color.</string>
   <string name="Eclipse.Option.Officer.MaxBulletsTotal">Maximum Bullets in Total</string>
   <string name="Eclipse.Option.Officer.MaxBulletsAtOnce">Maximum Bullets at Once</string>
   <string name="Eclipse.Option.Officer.RoundsPunished"># of Rounds to Shoot Again After Misfire</string>
+
+  <!-- Investigator -->
+  <string name="Eclipse.Role.Investigator">Investigator</string>
+  <string name="Eclipse.Role.Investigator.IntroBlurb">Find evildoers by tracing footsteps</string>
+  <string name="Eclipse.Role.Investigator.MedDescription">Watch where others are going by following footsteps.</string>
+  <string name="Eclipse.Role.Investigator.TabDescription">You can see everyone's footprints.</string>
+  <string name="Eclipse.Role.Investigator.WikiDescription">The Investigator is a Crewmate Investigative role that can see player's footprints throughout the game. Swooped players' footprints will not be visible to the Investigator.</string>
+<!-- Investigator Options -->
+  <string name="Eclipse.Option.Investigator.FootprintMode">Footprints Added Based On</string>
+  <string name="Eclipse.Option.Investigator.FootprintSize">Footprint Size</string>
+  <string name="Eclipse.Option.Investigator.FootprintDuration">Footprint Duration</string>
+  <string name="Eclipse.Option.Investigator.Anonymous">Anonymous Footprint</string>
+  <string name="Eclipse.Option.Investigator.NearVents">Footprint Vent Visible</string>
+  <string name="Eclipse.Option.Investigator.FootprintMode.Distance">Distance</string>
+  <string name="Eclipse.Option.Investigator.FootprintMode.Time">Time</string>
+  <string name="Eclipse.Option.Investigator.IntervalDistance">Footprint interval (distance)</string>
+  <string name="Eclipse.Option.Investigator.IntervalTime">Footprint interval (time)</string>
+
 </resources>

@@ -136,5 +136,10 @@ internal static class EclipseAssets
         return EclipseBundle.Has(BundleArt.SpritesFolder, name) ? new BundleSprite(BundleArt.SpritesFolder, name) : null;
     }
 
+    public static LoadableAsset<Sprite>? Footprint()
+    {
+        return EclipseBundle.Has(BundleArt.SpritesFolder, "Footprint") ? new BundleSprite(BundleArt.SpritesFolder, "Footprint") : null;
+    }
+
 
 }

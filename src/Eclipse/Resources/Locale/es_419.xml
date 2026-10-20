@@ -162,4 +162,21 @@ Si es muy cerca, verás el color de quien la usó.</string>
   <string name="Eclipse.Option.Officer.MaxBulletsTotal">Máx de balas en total</string>
   <string name="Eclipse.Option.Officer.MaxBulletsAtOnce">Máx de balas a la vez</string>
   <string name="Eclipse.Option.Officer.RoundsPunished">Rondas antes de poder disparar tras fallar</string>
+
+  <!-- Investigator -->
+  <string name="Eclipse.Role.Investigator">Investigador</string>
+  <string name="Eclipse.Role.Investigator.IntroBlurb">Descubre a los malos siguiendo sus huellas</string>
+  <string name="Eclipse.Role.Investigator.MedDescription">Averigua donde van los demás siguiendo sus pasos.</string>
+  <string name="Eclipse.Role.Investigator.TabDescription">Puedes ver las huellas de todos los jugadores.</string>
+  <string name="Eclipse.Role.Investigator.WikiDescription">El Investigador puede ver las huellas de los jugadores a lo largo de toda la partida. Las huellas de jugadores invisibles no serán vistas por el Investigador.</string>
+  <string name="Eclipse.Option.Investigator.FootprintMode">Las huellas se generan según</string>
+  <string name="Eclipse.Option.Investigator.FootprintSize">Tamaño de las huellas</string>
+  <string name="Eclipse.Option.Investigator.FootprintDuration">Duración de las huellas</string>
+  <string name="Eclipse.Option.Investigator.Anonymous">Huellas anónimas</string>
+  <string name="Eclipse.Option.Investigator.NearVents">Mostrar huellas al usar ductos</string>
+  <string name="Eclipse.Option.Investigator.FootprintMode.Distance">Distancia</string>
+  <string name="Eclipse.Option.Investigator.FootprintMode.Time">Tiempo</string>
+  <string name="Eclipse.Option.Investigator.IntervalDistance">Intervalo de huellas (distancia)</string>
+  <string name="Eclipse.Option.Investigator.IntervalTime">Intervalo de huellas (tiempo)</string>
+
 </resources>
