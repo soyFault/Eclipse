@@ -182,4 +182,26 @@ If done very close, you can see the source's color.</string>
   <string name="Eclipse.Option.Investigator.IntervalDistance">Footprint interval (distance)</string>
   <string name="Eclipse.Option.Investigator.IntervalTime">Footprint interval (time)</string>
 
+  <!-- Mystic -->
+  <string name="Eclipse.Role.Mystic">Mystic</string>
+  <string name="Eclipse.Role.Mystic.IntroBlurb">Know when and where kills happen.</string>
+  <string name="Eclipse.Role.Mystic.MedDescription">Get notified when crewmates die.</string>
+  <string name="Eclipse.Role.Mystic.TabDescription">Understand when and where kills happen.</string>
+  <string name="Eclipse.Role.Mystic.WikiDescription">The Mystic is a Crewmate Investigative role that gets an alert when someone is killed: the screen flashes and an arrow points to the body for a moment.</string>
+  <string name="Eclipse.Option.Mystic.ArrowDuration">Dead body arrow duration</string>
+
+
+  <!-- Snitch -->
+  <string name="Eclipse.Role.Snitch">Snitch</string>
+  <string name="Eclipse.Role.Snitch.IntroBlurb">Find the Impostors!</string>
+  <string name="Eclipse.Role.Snitch.MedDescription">Rat out the Impostors upon completion of your tasks.</string>
+  <string name="Eclipse.Role.Snitch.TabDescription">Complete all your tasks to discover the Impostors.</string>
+  <string name="Eclipse.Role.Snitch.WikiDescription">The Snitch is a Crewmate Investigative role that can reveal the Impostors to themselves by finishing all their tasks. Upon completing all tasks, the Impostors will be revealed to the Snitch with an arrow and their red name. When few tasks remain, the Impostors are warned and see the Snitch.</string>
+  <string name="Eclipse.Role.Snitch.TabCompleted">Find the Impostors!</string>
+  <string name="Eclipse.Role.Snitch.SelfRevealed">The impostors know of your whereabouts!</string>
+  <string name="Eclipse.Role.Snitch.ImpostorRevealed">The Snitch is getting closer to reveal you!</string>
+  <string name="Eclipse.Role.Snitch.SelfCompleted">You have revealed the impostors!</string>
+  <string name="Eclipse.Role.Snitch.ImpostorCompleted">The Snitch knows what you are now!</string>
+  <string name="Eclipse.Option.Snitch.SeesImpostorsInMeetings">Snitch sees impostors in meetings</string>
+  <string name="Eclipse.Option.Snitch.TasksRemainingWhenRevealed">Tasks remaining when revealed</string>
 </resources>

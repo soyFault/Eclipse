@@ -179,4 +179,25 @@ Si es muy cerca, verás el color de quien la usó.</string>
   <string name="Eclipse.Option.Investigator.IntervalDistance">Intervalo de huellas (distancia)</string>
   <string name="Eclipse.Option.Investigator.IntervalTime">Intervalo de huellas (tiempo)</string>
 
+  <!-- Místico -->
+  <string name="Eclipse.Role.Mystic">Místico</string>
+  <string name="Eclipse.Role.Mystic.IntroBlurb">Sabes cuándo y dónde ocurren las muertes.</string>
+  <string name="Eclipse.Role.Mystic.MedDescription">Recibe un aviso cuando muere un tripulante.</string>
+  <string name="Eclipse.Role.Mystic.TabDescription">Entiende cuándo y dónde se mata.</string>
+  <string name="Eclipse.Role.Mystic.WikiDescription">El Místico es un Tripulante Investigativo que recibe un aviso cuando alguien muere asesinado: la pantalla parpadea y una flecha señala el cuerpo un instante.</string>
+  <string name="Eclipse.Option.Mystic.ArrowDuration">Duración de la flecha al cuerpo</string>
+
+  <!-- Snitch -->
+  <string name="Eclipse.Role.Snitch">Soplón</string>
+  <string name="Eclipse.Role.Snitch.IntroBlurb">¡Encuentra a los Impostores!</string>
+  <string name="Eclipse.Role.Snitch.MedDescription">Delata a los impostores al terminar tus tareas.</string>
+  <string name="Eclipse.Role.Snitch.TabDescription">Termina todas tus tareas para descubrir a los impostores.</string>
+  <string name="Eclipse.Role.Snitch.WikiDescription">El Soplón es un Tripulante Investigativo que descubre a los impostores al terminar todas sus tareas: los ve con una flecha y con el nombre en rojo. Cuando le quedan pocas tareas, los impostores reciben un aviso y ven al Soplón.</string>
+  <string name="Eclipse.Role.Snitch.TabCompleted">¡Encuentra a los impostores!</string>
+  <string name="Eclipse.Role.Snitch.SelfRevealed">¡Los impostores saben dónde estás!</string>
+  <string name="Eclipse.Role.Snitch.ImpostorRevealed">¡El Soplón está cerca de descubrirte!</string>
+  <string name="Eclipse.Role.Snitch.SelfCompleted">¡Has descubierto a los impostores!</string>
+  <string name="Eclipse.Role.Snitch.ImpostorCompleted">¡El Soplón ya sabe lo que eres!</string>
+  <string name="Eclipse.Option.Snitch.SeesImpostorsInMeetings">El Soplón ve a los impostores en las reuniones</string>
+  <string name="Eclipse.Option.Snitch.TasksRemainingWhenRevealed">Tareas restantes al revelarse</string>
 </resources>
