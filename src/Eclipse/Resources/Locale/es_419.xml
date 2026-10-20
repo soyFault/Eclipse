@@ -8,23 +8,23 @@
   <string name="Eclipse.Local.NameStyleTopSmall">Arriba (pequeño)</string>
   <string name="Eclipse.Local.NameStyleBottom">Abajo</string>
   <string name="Eclipse.Local.NameStyleBottomSmall">Abajo (pequeño)</string>
-  <string name="Eclipse.Local.ShowRoleIcons">Mostrar el ícono del rol junto al nombre</string>
-  <string name="Eclipse.Local.ColorPlayerNames">Colorear nombres con el color de rol</string>
+  <string name="Eclipse.Local.ShowRoleIcons">Mostrar ícono junto al nombre</string>
+  <string name="Eclipse.Local.ColorPlayerNames">Colorear nombres</string>
   <!-- Alineaciones -->
   <string name="Eclipse.Alignment.CrewInvestigative">Tripulante Investigativo</string>
-  <string name="Eclipse.Alignment.CrewInvestigative.Group">Tripulantes Investigativos</string>
+  <string name="Eclipse.Alignment.CrewInvestigative.Group">TRIPULANTES INVESTIGATIVOS</string>
   <string name="Eclipse.Alignment.CrewKilling">Tripulante Asesino</string>
-  <string name="Eclipse.Alignment.CrewKilling.Group">Tripulantes Asesinos</string>
+  <string name="Eclipse.Alignment.CrewKilling.Group">TRIPULANTES ASESINOS</string>
   <string name="Eclipse.Alignment.CrewProtective">Tripulante Protector</string>
-  <string name="Eclipse.Alignment.CrewProtective.Group">Tripulantes Protectores</string>
+  <string name="Eclipse.Alignment.CrewProtective.Group">TRIPULANTES PROTECTORES</string>
   <string name="Eclipse.Alignment.CrewPower">Tripulante Poderoso</string>
-  <string name="Eclipse.Alignment.CrewPower.Group">Tripulantes Poderosos</string>
+  <string name="Eclipse.Alignment.CrewPower.Group">TRIPULANTES PODEROSOS</string>
   <string name="Eclipse.Alignment.CrewSupport">Tripulante de Apoyo</string>
-  <string name="Eclipse.Alignment.CrewSupport.Group">Tripulantes de Apoyo</string>
+  <string name="Eclipse.Alignment.CrewSupport.Group">TRIPULANTES DE APOYO</string>
   <string name="Eclipse.Alignment.CrewAfterlife">Tripulante del Más Allá</string>
-  <string name="Eclipse.Alignment.CrewAfterlife.Group">Tripulantes del Más Allá</string>
+  <string name="Eclipse.Alignment.CrewAfterlife.Group">TRIPULANTES DEL MÁS ALLÁ</string>
   <string name="Eclipse.Alignment.CrewGhost">Tripulante Fantasma</string>
-  <string name="Eclipse.Alignment.CrewGhost.Group">Tripulantes Fantasma</string>
+  <string name="Eclipse.Alignment.CrewGhost.Group">TRIPULANTES FANTASMA</string>
 
   <string name="Eclipse.Alignment.ImpConcealing">Impostor Encubridor</string>
   <string name="Eclipse.Alignment.ImpConcealing.Group">Impostores Encubridores</string>
@@ -65,7 +65,7 @@
   <string name="Eclipse.Role.Aurial.MedDescription">Siente dónde se usan habilidades en tu zona.
 Si es muy cerca, verás el color de quien la usó.</string>
   <string name="Eclipse.Role.Aurial.TabDescription">Percibirás cualquier habilidad que se use dentro de tu aura</string>
-  <string name="Eclipse.Role.Aurial.WikiDescription">El Sensorial es un rol de tripulante investigativo al que se avisa cuando un jugador cercano usa una habilidad.</string>
+  <string name="Eclipse.Role.Aurial.WikiDescription">El Sensorial es un tripulante investigativo al que se avisa cuando un jugador cercano usa una habilidad.</string>
 <!-- Ajustes del Sensorial  -->
   <string name="Eclipse.Option.Aurial.AuraInnerRadius">Rango del color</string>
   <string name="Eclipse.Option.Aurial.AuraOuterRadius">Alcance máximo</string>
@@ -73,11 +73,10 @@ Si es muy cerca, verás el color de quien la usó.</string>
   <!-- Sheriff -->
   <string name="Eclipse.Role.Sheriff">Sheriff</string>
   <string name="Eclipse.Button.SheriffShoot">Disparar</string>
-  <string name="Eclipse.Role.Sheriff.IntroBlurb">Dispara a los culpables, pero perdona a los inocentes.</string>
-  <string name="Eclipse.Role.Sheriff.MedDescription">Dispara a los Impostores y a los Neutrales peligrosos.
-    Un disparo equivocado es un fallo.</string>
-  <string name="Eclipse.Role.Sheriff.TabDescription">Dispara a los Impostores. Si le das a un inocente es un fallo y pierdes tu habilidad.</string>
-  <string name="Eclipse.Role.Sheriff.WikiDescription">El Sheriff es un Tripulante con un arma. Disparar a un Impostor lo mata. Disparar a un inocente es un fallo: muere el Sheriff, el objetivo, ambos o nadie (es un ajuste), y el Sheriff no puede volver a disparar. Los roles Neutrales pueden ser objetivos válidos según su tipo.</string>
+  <string name="Eclipse.Role.Sheriff.IntroBlurb">Dispara a los culpables</string>
+  <string name="Eclipse.Role.Sheriff.MedDescription">Dispara a los Impostores y a los Neutrales peligrosos, pero ten cuidado porque equivocarse tiene consecuencias.</string>
+  <string name="Eclipse.Role.Sheriff.TabDescription">Dispara a los Impostores. Si le das a un inocente fallas y ya no puedes disparar.</string>
+  <string name="Eclipse.Role.Sheriff.WikiDescription">El Sheriff es un Tripulante Asesino. Disparar a un Impostor lo mata. Disparar a un inocente es un fallo: muere el Sheriff, el objetivo, ambos o nadie (es un ajuste), y el Sheriff no puede volver a disparar. Los roles Neutrales pueden ser objetivos válidos según su tipo.</string>
   <string name="Eclipse.Role.Sheriff.MisfireFeedback">¡Fallaste el disparo!</string>
   <string name="Eclipse.Role.Sheriff.TabMisfired">Ya no puedes disparar.</string>
   <string name="Eclipse.Role.Sheriff.TabMisfireKillsSheriff">Un disparo fallido hará que te suicides.</string>
@@ -85,17 +84,99 @@ Si es muy cerca, verás el color de quien la usó.</string>
   <string name="Eclipse.Role.Sheriff.TabMisfireKillsBoth">Un disparo fallido te mata a ti y a tu objetivo.</string>
   <string name="Eclipse.Role.Sheriff.TabMisfireKillsNobody">Un disparo fallido evitará que vuelvas a disparar.</string>
 <!-- Opciones del Sheriff-->
-  <string name="Eclipse.Option.Sheriff.FirstRoundUse">Permitir disparar en la primera ronda</string>
-  <string name="Eclipse.Option.Sheriff.CanSelfReport">El Sheriff puede reportar sus propios cuerpos</string>
+  <string name="Eclipse.Option.Sheriff.FirstRoundUse">Permitir en la primera ronda</string>
+  <string name="Eclipse.Option.Sheriff.CanSelfReport">Puede reportar sus propios cuerpos</string>
   <string name="Eclipse.Option.Sheriff.CommsDisables">Comms desactiva al Sheriff</string>
-  <string name="Eclipse.Option.Sheriff.KillCooldown">Enfriamiento del disparo del Sheriff</string>
-  <string name="Eclipse.Option.Sheriff.ShootNeutralBenign">El Sheriff puede disparar a roles Neutrales Benignos</string>
-  <string name="Eclipse.Option.Sheriff.ShootNeutralEvil">El Sheriff puede disparar a roles Neutrales Malvados</string>
-  <string name="Eclipse.Option.Sheriff.ShootNeutralKilling">El Sheriff puede disparar a roles Neutrales Asesinos</string>
-  <string name="Eclipse.Option.Sheriff.ShootNeutralOutlier">El Sheriff puede disparar a roles Neutrales Atípicos</string>
-  <string name="Eclipse.Option.Sheriff.MisfireKills">Un fallo mata a</string>
-  <string name="Eclipse.Option.Sheriff.MisfireKills.Sheriff">El Sheriff</string>
-  <string name="Eclipse.Option.Sheriff.MisfireKills.Target">El objetivo</string>
+  <string name="Eclipse.Option.Sheriff.KillCooldown">Enfriamiento del disparo</string>
+  <string name="Eclipse.Option.Sheriff.ShootNeutralBenign">Puede disparar a Neutrales Benignos</string>
+  <string name="Eclipse.Option.Sheriff.ShootNeutralEvil">Puede disparar a Neutrales Malvados</string>
+  <string name="Eclipse.Option.Sheriff.ShootNeutralKilling">Puede disparar a Neutrales Asesinos</string>
+  <string name="Eclipse.Option.Sheriff.ShootNeutralOutlier">Puede disparar a Neutrales Atípicos</string>
+  <string name="Eclipse.Option.Sheriff.MisfireKills">Fallar mata a</string>
+  <string name="Eclipse.Option.Sheriff.MisfireKills.Sheriff">Sheriff</string>
+  <string name="Eclipse.Option.Sheriff.MisfireKills.Target">Objetivo</string>
   <string name="Eclipse.Option.Sheriff.MisfireKills.Both">Ambos</string>
   <string name="Eclipse.Option.Sheriff.MisfireKills.Nobody">Nadie</string>
+
+  <!-- Medic -->
+  <string name="Eclipse.Role.Medic">Chamán</string>
+  <string name="Eclipse.Role.Medic.IntroBlurb">Invoca para proteger a un tripulante.</string>
+  <string name="Eclipse.Role.Medic.MedDescription">Protege a un jugador con un escudo. Los ataques contra él se detienen.</string>
+  <string name="Eclipse.Role.Medic.TabDescription">Protege a un jugador con un escudo para que los ataques contra él se detengan.</string>
+  <string name="Eclipse.Role.Medic.WikiDescription">El Chamán es un Tripulante Protector que otorga un escudo. Mientras dura, los ataques contra el jugador protegido se detienen: el atacante lo nota y se queda con un enfriamiento corto. El escudo termina cuando muere el protegido o el Chamán y, según los ajustes, cuando absorbe un ataque.</string>
+  <string name="Eclipse.Role.Medic.TabProtecting">Estás protegiendo a &lt;player&gt;.</string>
+  <string name="Eclipse.Role.Medic.AttackBlocked">¡El objetivo está protegido por un chamán!</string>
+  <string name="Eclipse.Role.Medic.ShieldAbsorbed">¡Un escudo absorbió un ataque!</string>
+  <string name="Eclipse.Modifier.MedicShield">Escudo de Chamán</string>
+  <string name="Eclipse.Modifier.MedicShield.Description">El escudo de un Chamán te protege de los ataques.</string>
+  <string name="Eclipse.Button.MedicShield">Escudo</string>
+  <string name="Eclipse.Option.Medic.ShieldedKnows">El protegido sabe que tiene escudo</string>
+  <string name="Eclipse.Option.Medic.WhoGetsNotification">A quién avisar de ataques</string>
+  <string name="Eclipse.Option.Medic.Audience.Medic">Chamán</string>
+  <string name="Eclipse.Option.Medic.Audience.Shielded">Al protegido</string>
+  <string name="Eclipse.Option.Medic.Audience.ShieldedAndMedic">Al protegido y al Chamán</string>
+  <string name="Eclipse.Option.Medic.Audience.Nobody">A nadie</string>
+  <string name="Eclipse.Option.Medic.Audience.Everyone">A todos</string>
+  <string name="Eclipse.Option.Medic.ChangeTarget">El Chamán puede mover el escudo (una vez por ronda)</string>
+  <string name="Eclipse.Option.Medic.ShieldUses">Máximo de escudos que puede dar</string>
+  <string name="Eclipse.Option.Medic.ShieldBreaks">El escudo se rompe al absorber un ataque</string>
+  <string name="Eclipse.Option.Medic.ShowReports">Mostrar informes en el chat</string>
+  <string name="Eclipse.Option.Medic.ReportNameDuration">Tiempo en que el informe dice el nombre del asesino</string>
+  <string name="Eclipse.Option.Medic.ReportColorDuration">Tiempo en que el informe da el tono de color del asesino</string>
+  <string name="Eclipse.Role.Medic.Report.Title">Informe del Chamán</string>
+  <string name="Eclipse.Role.Medic.Report.NoInformation">El cuerpo no pudo dar información.
+    Murió hace &lt;time&gt; s.</string>
+  <string name="Eclipse.Role.Medic.Report.TooOld">El cuerpo es demasiado antiguo para obtener información.
+    Murió hace &lt;time&gt; s.</string>
+  <string name="Eclipse.Role.Medic.Report.Suicide">¡La muerte parece haber sido un suicidio!
+    Murió hace &lt;time&gt; s.</string>
+  <string name="Eclipse.Role.Medic.Report.KillerName">¡El asesino parece ser &lt;player&gt;!
+    Asesinado hace &lt;time&gt; s.</string>
+  <string name="Eclipse.Role.Medic.Report.KillerDarker">¡El asesino parece tener un color más oscuro!
+    Asesinado hace &lt;time&gt; s.</string>
+  <string name="Eclipse.Role.Medic.Report.KillerLighter">¡El asesino parece tener un color más claro!
+    Asesinado hace &lt;time&gt; s.</string>
+
+  <!-- Officer -->
+  <string name="Eclipse.Role.Officer">Oficial</string>
+  <string name="Eclipse.Role.Officer.IntroBlurb">Recarga y dispara a los [color=#FF0000FF]Asesinos[/color]</string>
+  <string name="Eclipse.Role.Officer.MedDescription">Recarga tu arma.[nl]Dispárale a los que amenazan a la Tripulación.</string>
+  <string name="Eclipse.Role.Officer.TabDescription">Carga balas estratégicamente sin desperdiciarlas.[nl]Las balas cargadas hace más de[nl]10 s se reinician la siguiente ronda.</string>
+  <string name="Eclipse.Role.Officer.WikiDescription">El Oficial es un Tripulante Asesino que puede disparar a otros jugadores con munición limitada. Debe cargar balas, las cuales solo duran una ronda, a menos que se carguen durante los últimos 10 segundos.</string>
+  <string name="Eclipse.Role.Officer.TabWaitCount">Rondas restantes para volver a disparar: &lt;count&gt;</string>
+  <string name="Eclipse.Role.Officer.TabWaitNext">La siguiente ronda podrás volver a disparar.</string>
+  <string name="Eclipse.Role.Officer.TabMajorityInnocent">Solo dispara a Impostores y Neutrales Asesinos.</string>
+  <string name="Eclipse.Role.Officer.TabCrewmatesInnocent">Solo dispara a Impostores y Neutrales.</string>
+  <string name="Eclipse.Role.Officer.TabKillBased">Solo dispara a quienes ya hayan matado.</string>
+  <string name="Eclipse.Button.OfficerLoad">Recargar</string>
+  <string name="Eclipse.Button.OfficerShoot">Disparar</string>
+  <string name="Eclipse.Role.Officer.BadKillFeedback">¡Le disparaste a un inocente! Tu arma ha sido confiscada por el momento.</string>
+<!-- Opciones del Oficial -->
+  <string name="Eclipse.Option.Officer.ShootCooldown">Tiempo de recarga de Disparar</string>
+  <string name="Eclipse.Option.Officer.LoadCooldown">Tiempo para Recargar</string>
+  <string name="Eclipse.Option.Officer.CanSelfReport">Puede auto-reportarse</string>
+  <string name="Eclipse.Option.Officer.FirstRound">Permitir disparar en la primera ronda</string>
+  <string name="Eclipse.Option.Officer.OnlyActiveKillers">Solo puede disparar a jugadores que hayan matado</string>
+  <string name="Eclipse.Option.Officer.CrewKillingInnocent">Los Tripulantes Asesinos son inocentes</string>
+  <string name="Eclipse.Option.Officer.NeutralsInnocent">Los Neutrales no Asesinos son inocentes</string>
+  <string name="Eclipse.Option.Officer.MaxBulletsTotal">Máx de balas en total</string>
+  <string name="Eclipse.Option.Officer.MaxBulletsAtOnce">Máx de balas a la vez</string>
+  <string name="Eclipse.Option.Officer.RoundsPunished">Rondas antes de poder disparar tras fallar</string>
+
+  <!-- Investigator -->
+  <string name="Eclipse.Role.Investigator">Investigador</string>
+  <string name="Eclipse.Role.Investigator.IntroBlurb">Descubre a los malos siguiendo sus huellas</string>
+  <string name="Eclipse.Role.Investigator.MedDescription">Averigua donde van los demás siguiendo sus pasos.</string>
+  <string name="Eclipse.Role.Investigator.TabDescription">Puedes ver las huellas de todos los jugadores.</string>
+  <string name="Eclipse.Role.Investigator.WikiDescription">El Investigador puede ver las huellas de los jugadores a lo largo de toda la partida. Las huellas de jugadores invisibles no serán vistas por el Investigador.</string>
+  <string name="Eclipse.Option.Investigator.FootprintMode">Las huellas se generan según</string>
+  <string name="Eclipse.Option.Investigator.FootprintSize">Tamaño de las huellas</string>
+  <string name="Eclipse.Option.Investigator.FootprintDuration">Duración de las huellas</string>
+  <string name="Eclipse.Option.Investigator.Anonymous">Huellas anónimas</string>
+  <string name="Eclipse.Option.Investigator.NearVents">Mostrar huellas al usar ductos</string>
+  <string name="Eclipse.Option.Investigator.FootprintMode.Distance">Distancia</string>
+  <string name="Eclipse.Option.Investigator.FootprintMode.Time">Tiempo</string>
+  <string name="Eclipse.Option.Investigator.IntervalDistance">Intervalo de huellas (distancia)</string>
+  <string name="Eclipse.Option.Investigator.IntervalTime">Intervalo de huellas (tiempo)</string>
+
 </resources>

@@ -3,6 +3,7 @@ using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
 using Eclipse.Assets;
 using Eclipse.Api.Alignments;
+using Eclipse.Game;
 using HarmonyLib;
 using MiraAPI;
 using MiraAPI.PluginLoading;
@@ -13,9 +14,6 @@ using Reactor.Networking.Attributes;
 
 namespace Eclipse;
 
-/// <summary>
-/// The Eclipse plugin: BepInEx loads it, Mira API scans it for roles, buttons and options.
-/// </summary>
 [BepInAutoPlugin("fault.eclipse", "Eclipse")]
 [BepInProcess("Among Us.exe")]
 [BepInDependency(ReactorPlugin.Id)]
@@ -32,13 +30,12 @@ public partial class EclipsePlugin : BasePlugin, IMiraPlugin
         return Config;
     }
 
-    /// <inheritdoc />
-    /// <remarks>BepInEx calls this ONCE, at start-up. If it throws, the mod does not load: read the log.</remarks>
     public override void Load()
     {
         MiraLocaleManager.Register(Id, "Eclipse");
         BuiltInAlignments.RegisterAll();
         Harmony.PatchAll();
+        LocalTick.Register(Footprints.Tick);
         Log.LogInfo($"{Name} {Version} cargado.");
         EclipseBundle.Report();
     }

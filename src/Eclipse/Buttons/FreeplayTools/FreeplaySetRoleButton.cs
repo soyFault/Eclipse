@@ -19,7 +19,7 @@ internal sealed class FreeplaySetRoleButton : EclipseActionButton
 
     public override ButtonLocation Location => ButtonLocation.BottomLeft;
 
-    public override LoadableAsset<Sprite> Sprite => EclipseAssets.ButtonIcon("FreeplaySetRole", MiraAssets.CustomTeamFile);
+    public override LoadableAsset<Sprite> Sprite => EclipseAssets.FreeplayIcon("FreeplaySetRole", MiraAssets.CustomTeamFile);
 
     public override bool Enabled(RoleBehaviour? role)
     {

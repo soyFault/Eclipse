@@ -52,7 +52,14 @@
   <string name="Eclipse.Alignment.NeutralGhost">Neutral Ghost</string>
   <string name="Eclipse.Alignment.NeutralGhost.Group">Neutral Ghost Roles</string>
 <!-- Freeplay Tools-->
+  <!-- Herramientas de Freeplay-->
+  <string name="Eclipse.Freeplay.SetRole">Give Role</string>
+  <string name="Eclipse.Freeplay.GiveShield">Give Shield</string>
+  <string name="Eclipse.Freeplay.NoMedic">First give the medic role to a crewmate (Give Role)</string>
+  <string name="Eclipse.Freeplay.Attack">Make Attack</string>
   <string name="Eclipse.Freeplay.UseAbility">Use Ability</string>
+  <string name="Eclipse.Freeplay.Reset">Restart Game</string>
+  <string name="Eclipse.Freeplay.ResetPopup">Game restarted. Everyone revived and kept their roles.</string>
 <!-- Aurial -->
   <string name="Eclipse.Role.Aurial">Aurial</string>
   <string name="Eclipse.Role.Aurial.IntroBlurb">Sense disturbances in your aura.</string>
@@ -92,4 +99,87 @@ If done very close, you can see the source's color.</string>
   <string name="Eclipse.Option.Sheriff.MisfireKills.Target">The target</string>
   <string name="Eclipse.Option.Sheriff.MisfireKills.Both">Both</string>
   <string name="Eclipse.Option.Sheriff.MisfireKills.Nobody">Nobody</string>
+
+  <!-- Medic -->
+  <string name="Eclipse.Role.Medic">Shaman</string>
+  <string name="Eclipse.Role.Medic.IntroBlurb">Create a shield to protect a crewmate.</string>
+  <string name="Eclipse.Role.Medic.MedDescription">Shield a player. Attacks on them are stopped.</string>
+  <string name="Eclipse.Role.Medic.TabDescription">Shield a player so that attacks on them are stopped.</string>
+  <string name="Eclipse.Role.Medic.WikiDescription">The Shaman is a Crewmate who shields other players. While the shield lasts, attacks on the shielded player are stopped: the attacker is told and is left with a short cooldown. The shield ends when the shielded player or the Medic dies, and, depending on the settings, when it absorbs an attack.</string>
+  <string name="Eclipse.Role.Medic.TabProtecting">You are protecting &lt;player&gt;.</string>
+  <string name="Eclipse.Role.Medic.AttackBlocked">The target is protected by a shield!</string>
+  <string name="Eclipse.Role.Medic.ShieldAbsorbed">A shield absorbed an attack!</string>
+  <string name="Eclipse.Modifier.MedicShield">Shaman shield</string>
+  <string name="Eclipse.Modifier.MedicShield.Description">A Shaman's shield protects you from attacks.</string>
+  <string name="Eclipse.Button.MedicShield">Shield</string>
+  <string name="Eclipse.Option.Medic.ShieldedKnows">Shielded player knows about the shield</string>
+  <string name="Eclipse.Option.Medic.WhoGetsNotification">Who is told when a shield absorbs an attack</string>
+  <string name="Eclipse.Option.Medic.Audience.Medic">Shaman</string>
+  <string name="Eclipse.Option.Medic.Audience.Shielded">The shielded player</string>
+  <string name="Eclipse.Option.Medic.Audience.ShieldedAndMedic">The shielded player and the Shaman</string>
+  <string name="Eclipse.Option.Medic.Audience.Nobody">Nobody</string>
+  <string name="Eclipse.Option.Medic.Audience.Everyone">Everyone</string>
+  <string name="Eclipse.Option.Medic.ChangeTarget">Shaman can move the shield (once per round)</string>
+  <string name="Eclipse.Option.Medic.ShieldUses">Maximum shields given</string>
+  <string name="Eclipse.Option.Medic.ShieldBreaks">Shield breaks when it absorbs an attack</string>
+  <string name="Eclipse.Option.Medic.ShowReports">Show reports in chat</string>
+  <string name="Eclipse.Option.Medic.ReportNameDuration">Time the report names the killer</string>
+  <string name="Eclipse.Option.Medic.ReportColorDuration">Time the report gives the killer's color tone</string>
+  <string name="Eclipse.Role.Medic.Report.Title">Medic Body Report</string>
+  <string name="Eclipse.Role.Medic.Report.NoInformation">The corpse could not give any information.
+    Died &lt;time&gt;s ago.</string>
+  <string name="Eclipse.Role.Medic.Report.TooOld">The corpse is too old to gain information from.
+    Died &lt;time&gt;s ago.</string>
+  <string name="Eclipse.Role.Medic.Report.Suicide">The kill appears to have been a suicide!
+    Died &lt;time&gt;s ago.</string>
+  <string name="Eclipse.Role.Medic.Report.KillerName">The killer appears to be &lt;player&gt;!
+    Killed &lt;time&gt;s ago.</string>
+  <string name="Eclipse.Role.Medic.Report.KillerDarker">The killer appears to be a darker color!
+    Killed &lt;time&gt;s ago.</string>
+  <string name="Eclipse.Role.Medic.Report.KillerLighter">The killer appears to be a lighter color!
+    Killed &lt;time&gt;s ago.</string>
+
+  <!-- Officer -->
+  <string name="Eclipse.Role.Officer">Officer</string>
+  <string name="Eclipse.Role.Officer.IntroBlurb">Reload and shoot the [color=#FF0000FF]Killers[/color]</string>
+  <string name="Eclipse.Role.Officer.MedDescription">Reload your gun's chamber.[nl]Shoot those who threaten the Crewmates.</string>
+  <string name="Eclipse.Role.Officer.TabDescription">Load bullets strategically without wasting them.[nl]Loaded bullets older than 10s are reset next round.</string>
+  <string name="Eclipse.Role.Officer.WikiDescription">The Officer is a Crewmate Killing role that can shoot players with limited ammo. They must load bullets, which only last one round unless they are added within 10 seconds.</string>
+  <string name="Eclipse.Role.Officer.TabWaitCount">Rounds left to shoot again: &lt;count&gt;</string>
+  <string name="Eclipse.Role.Officer.TabWaitNext">Next round, you may shoot again.</string>
+  <string name="Eclipse.Role.Officer.TabMajorityInnocent">Only shoot Impostors and Neutral Killers.</string>
+  <string name="Eclipse.Role.Officer.TabCrewmatesInnocent">Only shoot Impostors and Neutrals.</string>
+  <string name="Eclipse.Role.Officer.TabKillBased">Only shoot anyone who's killed already.</string>
+  <string name="Eclipse.Button.OfficerLoad">Load</string>
+  <string name="Eclipse.Button.OfficerShoot">Shoot</string>
+  <string name="Eclipse.Role.Officer.BadKillFeedback">You've shot an innocent player! Your gun has been confiscated for now.</string>
+<!-- Officer Options -->
+  <string name="Eclipse.Option.Officer.ShootCooldown">Shoot Cooldown</string>
+  <string name="Eclipse.Option.Officer.LoadCooldown">Load Cooldown</string>
+  <string name="Eclipse.Option.Officer.CanSelfReport">Can Self Report</string>
+  <string name="Eclipse.Option.Officer.FirstRound">Allow Shooting in First Round</string>
+  <string name="Eclipse.Option.Officer.OnlyActiveKillers">Officer Can Only Shoot Players That Have Killed</string>
+  <string name="Eclipse.Option.Officer.CrewKillingInnocent">Crewmate Killing Roles are Innocent</string>
+  <string name="Eclipse.Option.Officer.NeutralsInnocent">Non-Killing Neutrals are Innocent</string>
+  <string name="Eclipse.Option.Officer.MaxBulletsTotal">Maximum Bullets in Total</string>
+  <string name="Eclipse.Option.Officer.MaxBulletsAtOnce">Maximum Bullets at Once</string>
+  <string name="Eclipse.Option.Officer.RoundsPunished"># of Rounds to Shoot Again After Misfire</string>
+
+  <!-- Investigator -->
+  <string name="Eclipse.Role.Investigator">Investigator</string>
+  <string name="Eclipse.Role.Investigator.IntroBlurb">Find evildoers by tracing footsteps</string>
+  <string name="Eclipse.Role.Investigator.MedDescription">Watch where others are going by following footsteps.</string>
+  <string name="Eclipse.Role.Investigator.TabDescription">You can see everyone's footprints.</string>
+  <string name="Eclipse.Role.Investigator.WikiDescription">The Investigator is a Crewmate Investigative role that can see player's footprints throughout the game. Swooped players' footprints will not be visible to the Investigator.</string>
+<!-- Investigator Options -->
+  <string name="Eclipse.Option.Investigator.FootprintMode">Footprints Added Based On</string>
+  <string name="Eclipse.Option.Investigator.FootprintSize">Footprint Size</string>
+  <string name="Eclipse.Option.Investigator.FootprintDuration">Footprint Duration</string>
+  <string name="Eclipse.Option.Investigator.Anonymous">Anonymous Footprint</string>
+  <string name="Eclipse.Option.Investigator.NearVents">Footprint Vent Visible</string>
+  <string name="Eclipse.Option.Investigator.FootprintMode.Distance">Distance</string>
+  <string name="Eclipse.Option.Investigator.FootprintMode.Time">Time</string>
+  <string name="Eclipse.Option.Investigator.IntervalDistance">Footprint interval (distance)</string>
+  <string name="Eclipse.Option.Investigator.IntervalTime">Footprint interval (time)</string>
+
 </resources>

@@ -7,6 +7,7 @@ internal static class BundleArt
     public const string ModifiersFolder = "Modifiers";
     public const string SpritesFolder = "Sprites";
     public const string FreeplayFolder = "Freeplay";
+    public const string PrefabsFolder = "PreFabs";
     public static string Stem(string assetPath)
     {
         var slash = assetPath.LastIndexOfAny(['/', '\\']);
