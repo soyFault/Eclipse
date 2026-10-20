@@ -1,4 +1,3 @@
-// Portions derived from earlier GPLv3 work; see ATTRIBUTIONS.md.
 using System.Text;
 using Eclipse.Api.Alignments;
 using Eclipse.Api.Roles;

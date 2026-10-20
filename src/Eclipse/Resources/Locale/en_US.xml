@@ -138,4 +138,30 @@ If done very close, you can see the source's color.</string>
     Killed &lt;time&gt;s ago.</string>
   <string name="Eclipse.Role.Medic.Report.KillerLighter">The killer appears to be a lighter color!
     Killed &lt;time&gt;s ago.</string>
+
+  <!-- Officer -->
+  <string name="Eclipse.Role.Officer">Officer</string>
+  <string name="Eclipse.Role.Officer.IntroBlurb">Reload and shoot the [color=#FF0000FF]Killers[/color]</string>
+  <string name="Eclipse.Role.Officer.MedDescription">Reload your gun's chamber.[nl]Shoot those who threaten the Crewmates.</string>
+  <string name="Eclipse.Role.Officer.TabDescription">Load bullets strategically without wasting them.[nl]Loaded bullets older than 10s are reset next round.</string>
+  <string name="Eclipse.Role.Officer.WikiDescription">The Officer is a Crewmate Killing role that can shoot players with limited ammo. They must load bullets, which only last one round unless they are added within 10 seconds.</string>
+  <string name="Eclipse.Role.Officer.TabWaitCount">Rounds left to shoot again: &lt;count&gt;</string>
+  <string name="Eclipse.Role.Officer.TabWaitNext">Next round, you may shoot again.</string>
+  <string name="Eclipse.Role.Officer.TabMajorityInnocent">Only shoot Impostors and Neutral Killers.</string>
+  <string name="Eclipse.Role.Officer.TabCrewmatesInnocent">Only shoot Impostors and Neutrals.</string>
+  <string name="Eclipse.Role.Officer.TabKillBased">Only shoot anyone who's killed already.</string>
+  <string name="Eclipse.Button.OfficerLoad">Load</string>
+  <string name="Eclipse.Button.OfficerShoot">Shoot</string>
+  <string name="Eclipse.Role.Officer.BadKillFeedback">You've shot an innocent player! Your gun has been confiscated for now.</string>
+<!-- Officer Options -->
+  <string name="Eclipse.Option.Officer.ShootCooldown">Shoot Cooldown</string>
+  <string name="Eclipse.Option.Officer.LoadCooldown">Load Cooldown</string>
+  <string name="Eclipse.Option.Officer.CanSelfReport">Can Self Report</string>
+  <string name="Eclipse.Option.Officer.FirstRound">Allow Shooting in First Round</string>
+  <string name="Eclipse.Option.Officer.OnlyActiveKillers">Officer Can Only Shoot Players That Have Killed</string>
+  <string name="Eclipse.Option.Officer.CrewKillingInnocent">Crewmate Killing Roles are Innocent</string>
+  <string name="Eclipse.Option.Officer.NeutralsInnocent">Non-Killing Neutrals are Innocent</string>
+  <string name="Eclipse.Option.Officer.MaxBulletsTotal">Maximum Bullets in Total</string>
+  <string name="Eclipse.Option.Officer.MaxBulletsAtOnce">Maximum Bullets at Once</string>
+  <string name="Eclipse.Option.Officer.RoundsPunished"># of Rounds to Shoot Again After Misfire</string>
 </resources>

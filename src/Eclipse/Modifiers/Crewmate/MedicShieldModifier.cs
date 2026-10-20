@@ -93,7 +93,6 @@ internal sealed class MedicShieldModifier : BaseModifier
         _bubble.SetActive(ShowsBubble());
     }
 
-    /// <inheritdoc />
     public override void OnDeactivate()
     {
         if (_bubble != null)
@@ -117,7 +116,6 @@ internal sealed class MedicShieldModifier : BaseModifier
         return local.Data.IsDead || (Player.AmOwner && ShieldedKnows) || _medics.Contains(local.PlayerId);
     }
 
-    /// <inheritdoc />
     public override void FixedUpdate()
     {
         if (_medics.IsEmpty)

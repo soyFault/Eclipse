@@ -1,4 +1,3 @@
-// Portions derived from earlier GPLv3 work; see ATTRIBUTIONS.md.
 using System.Linq;
 using Eclipse.Assets;
 using Eclipse.Freeplay;

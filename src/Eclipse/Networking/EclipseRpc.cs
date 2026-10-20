@@ -8,4 +8,5 @@ internal enum EclipseRpc : uint
     SheriffMisfired = 1,
     MedicShield = 2,
     ShieldBlocked = 3,
+    OfficerSync = 4,
 }

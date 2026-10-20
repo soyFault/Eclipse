@@ -47,7 +47,6 @@ internal sealed class MedicShieldButton : EclipsePlayerButton<MedicRole>
         return base.IsTargetValid(target) && PlayerControl.LocalPlayer.Data.Role is MedicRole role && target != role.Shielded;
     }
 
-    /// <inheritdoc />
     protected override void OnClick()
     {
         var local = PlayerControl.LocalPlayer;

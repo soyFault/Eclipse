@@ -131,4 +131,10 @@ internal static class EclipseAssets
         return _commsLock;
     }
 
+    public static LoadableAsset<Sprite>? KillBackground(string name)
+    {
+        return EclipseBundle.Has(BundleArt.SpritesFolder, name) ? new BundleSprite(BundleArt.SpritesFolder, name) : null;
+    }
+
+
 }

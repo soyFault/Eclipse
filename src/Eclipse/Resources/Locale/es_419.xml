@@ -136,4 +136,30 @@ Si es muy cerca, verás el color de quien la usó.</string>
     Asesinado hace &lt;time&gt; s.</string>
   <string name="Eclipse.Role.Medic.Report.KillerLighter">¡El asesino parece tener un color más claro!
     Asesinado hace &lt;time&gt; s.</string>
+
+  <!-- Officer -->
+  <string name="Eclipse.Role.Officer">Oficial</string>
+  <string name="Eclipse.Role.Officer.IntroBlurb">Recarga y dispara a los [color=#FF0000FF]Asesinos[/color]</string>
+  <string name="Eclipse.Role.Officer.MedDescription">Recarga tu arma.[nl]Dispárale a los que amenazan a la Tripulación.</string>
+  <string name="Eclipse.Role.Officer.TabDescription">Carga balas estratégicamente sin desperdiciarlas.[nl]Las balas cargadas hace más de[nl]10 s se reinician la siguiente ronda.</string>
+  <string name="Eclipse.Role.Officer.WikiDescription">El Oficial es un Tripulante Asesino que puede disparar a otros jugadores con munición limitada. Debe cargar balas, las cuales solo duran una ronda, a menos que se carguen durante los últimos 10 segundos.</string>
+  <string name="Eclipse.Role.Officer.TabWaitCount">Rondas restantes para volver a disparar: &lt;count&gt;</string>
+  <string name="Eclipse.Role.Officer.TabWaitNext">La siguiente ronda podrás volver a disparar.</string>
+  <string name="Eclipse.Role.Officer.TabMajorityInnocent">Solo dispara a Impostores y Neutrales Asesinos.</string>
+  <string name="Eclipse.Role.Officer.TabCrewmatesInnocent">Solo dispara a Impostores y Neutrales.</string>
+  <string name="Eclipse.Role.Officer.TabKillBased">Solo dispara a quienes ya hayan matado.</string>
+  <string name="Eclipse.Button.OfficerLoad">Recargar</string>
+  <string name="Eclipse.Button.OfficerShoot">Disparar</string>
+  <string name="Eclipse.Role.Officer.BadKillFeedback">¡Le disparaste a un inocente! Tu arma ha sido confiscada por el momento.</string>
+<!-- Opciones del Oficial -->
+  <string name="Eclipse.Option.Officer.ShootCooldown">Tiempo de recarga de Disparar</string>
+  <string name="Eclipse.Option.Officer.LoadCooldown">Tiempo para Recargar</string>
+  <string name="Eclipse.Option.Officer.CanSelfReport">Puede auto-reportarse</string>
+  <string name="Eclipse.Option.Officer.FirstRound">Permitir disparar en la primera ronda</string>
+  <string name="Eclipse.Option.Officer.OnlyActiveKillers">Solo puede disparar a jugadores que hayan matado</string>
+  <string name="Eclipse.Option.Officer.CrewKillingInnocent">Los Tripulantes Asesinos son inocentes</string>
+  <string name="Eclipse.Option.Officer.NeutralsInnocent">Los Neutrales no Asesinos son inocentes</string>
+  <string name="Eclipse.Option.Officer.MaxBulletsTotal">Máx de balas en total</string>
+  <string name="Eclipse.Option.Officer.MaxBulletsAtOnce">Máx de balas a la vez</string>
+  <string name="Eclipse.Option.Officer.RoundsPunished">Rondas antes de poder disparar tras fallar</string>
 </resources>
