@@ -34,10 +34,14 @@ internal sealed class SheriffShootButton : EclipsePlayerButton<SheriffRole>, IKi
 
     public override float InitialCooldown => 10f;
 
+    protected override bool IsRoundLocked => MatchRounds.IsFirstRoundLocked(OptionGroupSingleton<SheriffOptions>.Instance.FirstRoundUse);
+
+    protected override bool IsCommsLocked => OptionGroupSingleton<SheriffOptions>.Instance.CommsDisables && CommsState.IsActive;
+
     protected override bool CanTarget(SheriffRole role)
     {
         var options = OptionGroupSingleton<SheriffOptions>.Instance;
-        return !role.HasMisfired && !MatchRounds.IsFirstRoundLocked(options.FirstRoundUse) && !(options.CommsDisables && CommsState.IsActive);
+        return !role.HasMisfired && !IsRoundLocked && !IsCommsLocked;
     }
 
     protected override void OnClick()

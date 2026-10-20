@@ -12,19 +12,19 @@
   <string name="Eclipse.Local.ColorPlayerNames">Colorear nombres</string>
   <!-- Alineaciones -->
   <string name="Eclipse.Alignment.CrewInvestigative">Tripulante Investigativo</string>
-  <string name="Eclipse.Alignment.CrewInvestigative.Group">Tripulantes Investigativos</string>
+  <string name="Eclipse.Alignment.CrewInvestigative.Group">TRIPULANTES INVESTIGATIVOS</string>
   <string name="Eclipse.Alignment.CrewKilling">Tripulante Asesino</string>
-  <string name="Eclipse.Alignment.CrewKilling.Group">Tripulantes Asesinos</string>
+  <string name="Eclipse.Alignment.CrewKilling.Group">TRIPULANTES ASESINOS</string>
   <string name="Eclipse.Alignment.CrewProtective">Tripulante Protector</string>
-  <string name="Eclipse.Alignment.CrewProtective.Group">Tripulantes Protectores</string>
+  <string name="Eclipse.Alignment.CrewProtective.Group">TRIPULANTES PROTECTORES</string>
   <string name="Eclipse.Alignment.CrewPower">Tripulante Poderoso</string>
-  <string name="Eclipse.Alignment.CrewPower.Group">Tripulantes Poderosos</string>
+  <string name="Eclipse.Alignment.CrewPower.Group">TRIPULANTES PODEROSOS</string>
   <string name="Eclipse.Alignment.CrewSupport">Tripulante de Apoyo</string>
-  <string name="Eclipse.Alignment.CrewSupport.Group">Tripulantes de Apoyo</string>
+  <string name="Eclipse.Alignment.CrewSupport.Group">TRIPULANTES DE APOYO</string>
   <string name="Eclipse.Alignment.CrewAfterlife">Tripulante del Más Allá</string>
-  <string name="Eclipse.Alignment.CrewAfterlife.Group">Tripulantes del Más Allá</string>
+  <string name="Eclipse.Alignment.CrewAfterlife.Group">TRIPULANTES DEL MÁS ALLÁ</string>
   <string name="Eclipse.Alignment.CrewGhost">Tripulante Fantasma</string>
-  <string name="Eclipse.Alignment.CrewGhost.Group">Tripulantes Fantasma</string>
+  <string name="Eclipse.Alignment.CrewGhost.Group">TRIPULANTES FANTASMA</string>
 
   <string name="Eclipse.Alignment.ImpConcealing">Impostor Encubridor</string>
   <string name="Eclipse.Alignment.ImpConcealing.Group">Impostores Encubridores</string>

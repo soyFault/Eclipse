@@ -16,6 +16,10 @@ internal static class EclipseAssets
     private static readonly Dictionary<string, TMP_SpriteAsset?> RoleTextIcons = [];
     private static readonly Dictionary<string, LoadableAsset<Sprite>> ButtonIcons = [];
     private static readonly Dictionary<string, LoadableAsset<Sprite>?> ModifierIcons = [];
+    private static LoadableAsset<Sprite>? _firstRoundLock;
+    private static bool _firstRoundLockLooked;
+    private static LoadableAsset<Sprite>? _commsLock;
+    private static bool _commsLockLooked;
 
     public static LoadableAsset<Sprite>? RoleIcon(string idPart)
     {
@@ -104,4 +108,27 @@ internal static class EclipseAssets
 
         return icon;
     }
+
+    public static LoadableAsset<Sprite>? FirstRoundLock()
+    {
+        if (!_firstRoundLockLooked)
+        {
+            _firstRoundLockLooked = true;
+            _firstRoundLock = EclipseBundle.Has(BundleArt.SpritesFolder, "FirstRoundLock") ? new BundleSprite(BundleArt.SpritesFolder, "FirstRoundLock") : null;
+        }
+
+        return _firstRoundLock;
+    }
+
+    public static LoadableAsset<Sprite>? CommsLock()
+    {
+        if (!_commsLockLooked)
+        {
+            _commsLockLooked = true;
+            _commsLock = EclipseBundle.Has(BundleArt.SpritesFolder, "CommsLock") ? new BundleSprite(BundleArt.SpritesFolder, "CommsLock") : null;
+        }
+
+        return _commsLock;
+    }
+
 }
