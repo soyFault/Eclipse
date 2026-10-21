@@ -37,19 +37,40 @@ internal static class SnitchEvents
 
     public static Color? NameColor(PlayerControl viewer, PlayerControl target)
     {
-        if (viewer.Data.Role is not SnitchRole snitch || target.Data?.Role == null)
+        if (viewer.Data == null || target.Data?.Role == null)
         {
             return null;
         }
 
-        var red = SnitchRules.SeesRedName(
-            snitch.Stage,
-            !viewer.Data.IsDead,
-            RoleClassification.Classify(target.Data.Role).Faction == Faction.Impostor,
-            !target.Data.IsDead && !target.Data.Disconnected,
-            MeetingHud.Instance != null,
-            OptionGroupSingleton<SnitchOptions>.Instance.SeesImpostorsInMeetings);
-        return red ? Palette.ImpostorRed : null;
+        var options = OptionGroupSingleton<SnitchOptions>.Instance;
+        var targetIsImpostor = RoleClassification.Classify(target.Data.Role).Faction == Faction.Impostor;
+        var targetAlive = !target.Data.IsDead && !target.Data.Disconnected;
+
+        // Any Snitch that has finished may reveal this impostor to this viewer: always to the Snitch; to the rest only in a meeting that Snitch called.
+        foreach (var snitch in CustomRoleUtils.GetActiveRolesOfType<SnitchRole>())
+        {
+            if (snitch.Player == null || snitch.Player.Data == null)
+            {
+                continue;
+            }
+
+            var red = SnitchRules.SeesRedName(
+                snitch.Stage,
+                !snitch.Player.Data.IsDead,
+                options.RevealsImpostors,
+                snitch.Player == viewer,
+                targetIsImpostor,
+                targetAlive,
+                MeetingHud.Instance != null,
+                options.SeesImpostorsInMeetings,
+                MeetingHud.Instance != null && MeetingHud.Instance.reporterId == snitch.Player.PlayerId);
+            if (red)
+            {
+                return Palette.ImpostorRed;
+            }
+        }
+
+        return null;
     }
 
     public static bool SnitchRoleIsPublic(PlayerControl viewer, PlayerControl target)

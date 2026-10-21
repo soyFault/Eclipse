@@ -187,7 +187,7 @@ Si es muy cerca, verás el color de quien la usó.</string>
   <string name="Eclipse.Role.Mystic.WikiDescription">El Místico es un Tripulante Investigativo que recibe un aviso cuando alguien muere asesinado: la pantalla parpadea y una flecha señala el cuerpo un instante.</string>
   <string name="Eclipse.Option.Mystic.ArrowDuration">Duración de la flecha al cuerpo</string>
 
-  <!-- Snitch -->
+  <!-- Soplón -->
   <string name="Eclipse.Role.Snitch">Soplón</string>
   <string name="Eclipse.Role.Snitch.IntroBlurb">¡Encuentra a los Impostores!</string>
   <string name="Eclipse.Role.Snitch.MedDescription">Delata a los impostores al terminar tus tareas.</string>
@@ -200,6 +200,24 @@ Si es muy cerca, verás el color de quien la usó.</string>
   <string name="Eclipse.Role.Snitch.ImpostorCompleted">¡El Soplón ya sabe lo que eres!</string>
   <string name="Eclipse.Option.Snitch.SeesImpostorsInMeetings">El Soplón ve a los impostores en las reuniones</string>
   <string name="Eclipse.Option.Snitch.TasksRemainingWhenRevealed">Tareas restantes al revelarse</string>
+  <string name="Eclipse.Option.Snitch.RevealsImpostors">El Soplón revela a los impostores</string>
+  <string name="Eclipse.Option.Snitch.RevealsImpostors.Self">Para sí mismo</string>
+  <string name="Eclipse.Option.Snitch.RevealsImpostors.Everyone">Para todos</string>
+
+  <!-- Rastreador -->
+  <string name="Eclipse.Role.Sonar">Rastreador</string>
+  <string name="Eclipse.Role.Sonar.IntroBlurb">Siente el movimiento de todos.</string>
+  <string name="Eclipse.Role.Sonar.MedDescription">Siente a varios tripulantes para saber hacia dónde están.</string>
+  <string name="Eclipse.Role.Sonar.TabDescription">Rastrea a los sospechosos para ver adónde van.</string>
+  <string name="Eclipse.Role.Sonar.WikiDescription">El Rastreador es un Tripulante Investigativo que puede rastrear a otros jugadores y ver su posición general en el mapa, con flechas de color hacia todos los rastreados.</string>
+  <string name="Eclipse.Role.Sonar.TabTracked">Jugadores rastreados:</string>
+  <string name="Eclipse.Button.SonarTrack">Rastrear</string>
+  <!-- Opciones del Rastreador -->
+  <string name="Eclipse.Option.Sonar.TrackCooldown">Enfriamiento de rastreo</string>
+  <string name="Eclipse.Option.Sonar.MaxTracks">Número inicial de rastreos</string>
+  <string name="Eclipse.Option.Sonar.UpdateInterval">Intervalo de actualización de la flecha</string>
+  <string name="Eclipse.Option.Sonar.ResetOnNewRound">Los rastreos se reinician cada ronda</string>
+  <string name="Eclipse.Option.Sonar.TaskUses">Gana más rastreos al completar tareas</string>
 
   <!-- Warden -->
   <string name="Eclipse.Role.Warden">Guardián</string>
@@ -215,4 +233,72 @@ Si es muy cerca, verás el color de quien la usó.</string>
   <string name="Eclipse.Option.Warden.ShowFortified.SelfAndWarden">Fortificado + Guardián</string>
   <string name="Eclipse.Option.Warden.ShowFortified.Everyone">Todos</string>
 
+  <!-- Clérigo -->
+  <string name="Eclipse.Role.Cleric">Clérigo</string>
+  <string name="Eclipse.Role.Cleric.IntroBlurb">Salva a los Tripulantes</string>
+  <string name="Eclipse.Role.Cleric.MedDescription">Protege tripulantes de las interacciones.[nl]Purifícalos para eliminar efectos negativos.</string>
+  <string name="Eclipse.Role.Cleric.TabDescription">Purifica los efectos negativos de los Tripulantes y[nl]lanza Barreras para impedir cualquier interacción</string>
+  <string name="Eclipse.Role.Cleric.TabProtecting">Barrera sobre: &lt;player&gt;</string>
+  <string name="Eclipse.Role.Cleric.WikiDescription">El Clérigo es un Tripulante Protector que puede proteger a los Tripulantes eliminando sus efectos negativos, además de colocarles barreras para impedir cualquier interacción.</string>
+  <string name="Eclipse.Button.ClericBarrier">Barrera</string>
+  <string name="Eclipse.Button.ClericCleanse">Purificar</string>
+  <string name="Eclipse.Role.Cleric.Report.Title">Informe del Clérigo</string>
+  <string name="Eclipse.Role.Cleric.Report.Found">Efectos purificados de &lt;player&gt;:</string>
+  <string name="Eclipse.Role.Cleric.Report.None">No se encontraron efectos negativos en &lt;player&gt;.</string>}
+<!-- Opciones del Clérigo -->
+  <string name="Eclipse.Option.Cleric.BarrierCooldown">Tiempo de recarga de Barrera</string>
+  <string name="Eclipse.Option.Cleric.BarrierDuration">Duración de Barrera</string>
+  <string name="Eclipse.Option.Cleric.CleanseCooldown">Tiempo de recarga de Purificar</string>
+  <string name="Eclipse.Option.Cleric.ProtectedSeesBarrier">El protegido ve la Barrera</string>
+  <string name="Eclipse.Option.Cleric.AttackNotification">Recibe una notificación de ataque</string>
+
+  <!-- Veterano -->
+  <string name="Eclipse.Role.Veteran">Veterano</string>
+  <string name="Eclipse.Role.Veteran.IntroBlurb">Ponte en alerta y evita toda interacción</string>
+  <string name="Eclipse.Role.Veteran.MedDescription">Ataca a quien intente interactuar contigo.</string>
+  <string name="Eclipse.Role.Veteran.TabDescription">Ponte en alerta para atacar a cualquiera que interactúe contigo.</string>
+  <string name="Eclipse.Role.Veteran.WikiDescription">El Veterano es un Tripulante Asesino que puede ponerse en alerta y matar a cualquiera que interactúe con él.</string>
+  <string name="Eclipse.Button.VeteranAlert">Alerta</string>
+  <string name="Eclipse.Button.VeteranAlerting">En alerta</string>
+  <string name="Eclipse.Role.Veteran.WarningTitle">Advertencia del Veterano</string>
+  <string name="Eclipse.Role.Veteran.AttackedMessage">¡Fuiste atacado antes de esta reunión mientras estabas en alerta!</string>
+<!-- Opciones del Veterano -->
+  <string name="Eclipse.Option.Veteran.AlertCooldown">Tiempo de recarga de Alerta</string>
+  <string name="Eclipse.Option.Veteran.AlertDuration">Duración de Alerta</string>
+  <string name="Eclipse.Option.Veteran.MaxAlerts">Cantidad inicial de Alertas</string>
+  <string name="Eclipse.Option.Veteran.KilledOnAlert">Puede morir mientras está en alerta</string>
+  <string name="Eclipse.Option.Veteran.KnowWhenAttacked">Descubrir ataques en la reunión</string>
+  <string name="Eclipse.Option.Veteran.TaskUses">Obtener más usos al completar tareas</string>
+  <string name="Eclipse.Option.Veteran.EveryoneSeesShield">Todos ven el escudo</string>
+
+  <!-- Reflector -->
+  <string name="Eclipse.Role.Mirrorcaster">Reflector</string>
+  <string name="Eclipse.Role.Mirrorcaster.IntroBlurb">Refleja ataques hacia otros</string>
+  <string name="Eclipse.Role.Mirrorcaster.MedDescription">Refleja ataques con tus Espejos Mágicos.[nl]Luego, ¡desátalos sobre los malos!</string>
+  <string name="Eclipse.Role.Mirrorcaster.TabDescription">Protege a un jugador con un Espejo Mágico.[nl]Si es atacado directamente,[nl]¡Desata el ataque sobre otro jugador!</string>
+  <string name="Eclipse.Role.Mirrorcaster.TabProtecting">Protegiendo a: &lt;player&gt;</string>
+  <string name="Eclipse.Role.Mirrorcaster.WikiDescription">El Reflector es un Tripulante Protector que puede colocar un Espejo Mágico sobre un jugador para protegerlo. Si ese jugador es atacado directamente, el Reflector podrá redirigirlo sobre otro jugador.</string>
+  <string name="Eclipse.Button.MirrorcasterMagicMirror">Espejo Mágico</string>
+  <string name="Eclipse.Button.MirrorcasterMagicMirrorProtecting">Protegiendo...</string>
+  <string name="Eclipse.Button.MirrorcasterUnleash">Reflejar</string>
+  <string name="Eclipse.Role.Mirrorcaster.TargetDiedNotif">&lt;player&gt; murió por un ataque indirecto, del cual tus espejos no podían protegerlo.</string>
+  <string name="Eclipse.Role.Mirrorcaster.TargetDidNotDieNotif">&lt;player&gt; no fue atacado.</string>
+  <string name="Eclipse.Role.Mirrorcaster.AttackedMessageWithType">¡&lt;player&gt; fue atacado por el &lt;attackerRole&gt;! ¡Ahora puedes lanzar ese ataque sobre otro jugador!</string>
+  <string name="Eclipse.Role.Mirrorcaster.AttackedMessageWithoutType">¡&lt;player&gt; fue atacado! ¡Ahora puedes lanzar ese ataque sobre otro jugador!</string>
+  <string name="Eclipse.Role.Mirrorcaster.AttackedMessageWithFaction">¡&lt;player&gt; fue atacado por un &lt;faction&gt;! ¡Ahora puedes lanzar ese ataque sobre otro jugador!</string>
+  <string name="Eclipse.Role.Mirrorcaster.AttackedMessageWithSubalignment">¡&lt;player&gt; fue atacado por un &lt;subalignment&gt;! ¡Ahora puedes lanzar ese ataque sobre otro jugador!</string>
+<!-- Opciones del Reflector -->
+  <string name="Eclipse.Option.Mirrorcaster.WhoGetsNotification">Quién es avisado de intentos de asesinato</string>
+  <string name="Eclipse.Option.Mirrorcaster.NotifEnum.Mirrorcaster">Reflector</string>
+  <string name="Eclipse.Option.Mirrorcaster.NotifEnum.MirrorcasterAndKiller">Reflector + Asesino</string>
+  <string name="Eclipse.Option.Mirrorcaster.MirrorCooldown">Tiempo de recarga del Espejo Mágico</string>
+  <string name="Eclipse.Option.Mirrorcaster.MirrorDuration">Duración del Espejo Mágico</string>
+  <string name="Eclipse.Option.Mirrorcaster.UnleashCooldown">Tiempo de recarga de Reflejar</string>
+  <string name="Eclipse.Option.Mirrorcaster.AttackInformationGiven">Información recibida al ser atacado</string>
+  <string name="Eclipse.Option.Mirrorcaster.InfoEnum.Role">Rol</string>
+  <string name="Eclipse.Option.Mirrorcaster.InfoEnum.Subalignment">Subalineación</string>
+  <string name="Eclipse.Option.Mirrorcaster.InfoEnum.Faction">Bando</string>
+  <string name="Eclipse.Option.Mirrorcaster.InfoEnum.Nothing">Nada</string>
+  <string name="Eclipse.Option.Mirrorcaster.AccumulateMultipleUnleashes">Acumular múltiples Ataques</string>
+  <string name="Eclipse.Option.Mirrorcaster.MaxMirrors">Máx Espejos Mágicos</string>
 </resources>

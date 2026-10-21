@@ -9,6 +9,13 @@ internal enum SnitchStage
     CompletedTasks = 2,
 }
 
+internal enum SnitchReveal
+{
+    Self = 0,
+
+    Everyone = 1,
+}
+
 internal static class SnitchRules
 {
     public static SnitchStage StageFor(int completed, int total, int remainingWhenRevealed)
@@ -32,9 +39,28 @@ internal static class SnitchRules
         return computed > current ? computed : current;
     }
 
-    public static bool SeesRedName(SnitchStage stage, bool snitchAlive, bool targetIsImpostor, bool targetAlive, bool inMeeting, bool seesInMeetings)
+    public static bool SeesRedName(
+        SnitchStage stage,
+        bool snitchAlive,
+        SnitchReveal reveal,
+        bool viewerIsSnitch,
+        bool targetIsImpostor,
+        bool targetAlive,
+        bool inMeeting,
+        bool seesInMeetings,
+        bool meetingCalledBySnitch)
     {
-        return stage == SnitchStage.CompletedTasks && snitchAlive && targetIsImpostor && targetAlive && (!inMeeting || seesInMeetings);
+        if (stage != SnitchStage.CompletedTasks || !snitchAlive || !targetIsImpostor || !targetAlive)
+        {
+            return false;
+        }
+
+        if (viewerIsSnitch)
+        {
+            return !inMeeting || seesInMeetings;
+        }
+
+        return reveal == SnitchReveal.Everyone && inMeeting && meetingCalledBySnitch;
     }
 
     public static bool RevealedTo(SnitchStage stage, bool snitchAlive, bool viewerIsImpostor, bool viewerAlive)

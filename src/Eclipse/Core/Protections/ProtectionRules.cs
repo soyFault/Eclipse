@@ -18,6 +18,16 @@ internal static class ProtectionRules
                || (viewerIsWarden && view is FortifyView.Warden or FortifyView.SelfAndWarden);
     }
 
+    public static bool ShowsBarrier(bool protectedSeesBarrier, bool viewerIsProtected, bool viewerIsCleric, bool viewerIsDead)
+    {
+        return viewerIsDead || viewerIsCleric || (viewerIsProtected && protectedSeesBarrier);
+    }
+
+    public static bool NotifiesProtector(ProtectionKind kind, bool barrierAttackNotification)
+    {
+        return kind != ProtectionKind.Barrier || barrierAttackNotification;
+    }
+
     public static bool CanFortify(bool alreadyFortifying)
     {
         return !alreadyFortifying;
