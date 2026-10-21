@@ -204,6 +204,11 @@ If done very close, you can see the source's color.</string>
   <string name="Eclipse.Role.Snitch.ImpostorCompleted">The Snitch knows what you are now!</string>
   <string name="Eclipse.Option.Snitch.SeesImpostorsInMeetings">Snitch sees impostors in meetings</string>
   <string name="Eclipse.Option.Snitch.TasksRemainingWhenRevealed">Tasks remaining when revealed</string>
+  <string name="Eclipse.Option.Snitch.RevealsImpostors">Snitch reveals impostors</string>
+  <string name="Eclipse.Option.Snitch.RevealsImpostors.Self">To itself</string>
+  <string name="Eclipse.Option.Snitch.RevealsImpostors.Everyone">To everyone</string>
+  <string name="Eclipse.Role.Snitch.ImpostorExposed">The Snitch has exposed you to everyone!</string>
+  <string name="Eclipse.Role.Snitch.EveryoneRevealed">The Snitch has revealed the impostors!</string>
 
   <!-- Sonar -->
   <string name="Eclipse.Role.Sonar">Sonar</string>
@@ -234,5 +239,72 @@ If done very close, you can see the source's color.</string>
   <string name="Eclipse.Option.Warden.ShowFortified.SelfAndWarden">Fortified + Warden</string>
   <string name="Eclipse.Option.Warden.ShowFortified.Everyone">Everyone</string>
 
+  <!-- Cleric -->
+  <string name="Eclipse.Role.Cleric">Cleric</string>
+  <string name="Eclipse.Role.Cleric.IntroBlurb">Save the crewmates</string>
+  <string name="Eclipse.Role.Cleric.MedDescription">Barrier crewmates to prevent interactions.[nl]Cleanse them to eliminate negative effects.</string>
+  <string name="Eclipse.Role.Cleric.TabDescription">Cleanse negative effects off of crewmates and[nl]cast Barriers to stop any interactions altogether</string>
+  <string name="Eclipse.Role.Cleric.TabProtecting">Barrier on: &lt;player&gt;</string>
+  <string name="Eclipse.Role.Cleric.WikiDescription">The Cleric is a Crewmate Protective that can protect crewmates by negating their negative effects, as well as placing barriers on them to prevent interactions.</string>
+  <string name="Eclipse.Button.ClericBarrier">Barrier</string>
+  <string name="Eclipse.Button.ClericCleanse">Cleanse</string>
+  <string name="Eclipse.Role.Cleric.Report.Title">Cleric Feedback</string>
+  <string name="Eclipse.Role.Cleric.Report.Found">Cleansed effects on &lt;player&gt;:</string>
+  <string name="Eclipse.Role.Cleric.Report.None">No negative effects were found on &lt;player&gt;.</string>
+<!-- Cleric Options -->
+  <string name="Eclipse.Option.Cleric.BarrierCooldown">Barrier Cooldown</string>
+  <string name="Eclipse.Option.Cleric.BarrierDuration">Barrier Duration</string>
+  <string name="Eclipse.Option.Cleric.CleanseCooldown">Cleanse Cooldown</string>
+  <string name="Eclipse.Option.Cleric.ProtectedSeesBarrier">Protected Player Sees Barrier</string>
+  <string name="Eclipse.Option.Cleric.AttackNotification">Cleric Gets Attack Notification</string>
 
+  <!-- Veteran -->
+  <string name="Eclipse.Role.Veteran">Veteran</string>
+  <string name="Eclipse.Role.Veteran.IntroBlurb">Alert to attack upon interactions</string>
+  <string name="Eclipse.Role.Veteran.MedDescription">Alert to attack anyone who attempts to interact with you.</string>
+  <string name="Eclipse.Role.Veteran.TabDescription">Alert to attack whoever interacts with you.</string>
+  <string name="Eclipse.Role.Veteran.WikiDescription">The Veteran is a Crewmate Killing role that can go on alert and kill anyone who interacts with them.</string>
+  <string name="Eclipse.Button.VeteranAlert">Alert</string>
+  <string name="Eclipse.Button.VeteranAlerting">Alerting</string>
+  <string name="Eclipse.Role.Veteran.WarningTitle">Veteran Warning</string>
+  <string name="Eclipse.Role.Veteran.AttackedMessage">You were attacked prior to this meeting while on alert!</string>
+<!-- Veteran Options -->
+  <string name="Eclipse.Option.Veteran.AlertCooldown">Alert Cooldown</string>
+  <string name="Eclipse.Option.Veteran.AlertDuration">Alert Duration</string>
+  <string name="Eclipse.Option.Veteran.MaxAlerts">Initial Number of Alerts</string>
+  <string name="Eclipse.Option.Veteran.KilledOnAlert">Can Be Killed On Alert</string>
+  <string name="Eclipse.Option.Veteran.KnowWhenAttacked">Knows When Attacked In Meeting</string>
+  <string name="Eclipse.Option.Veteran.TaskUses">Get More Uses From Completing Tasks</string>
+  <string name="Eclipse.Option.Veteran.EveryoneSeesShield">Everyone Sees the Shield</string>
+
+  <!-- Mirrorcaster -->
+  <string name="Eclipse.Role.Mirrorcaster">Mirrorcaster</string>
+  <string name="Eclipse.Role.Mirrorcaster.IntroBlurb">Reflect attacks onto others</string>
+  <string name="Eclipse.Role.Mirrorcaster.MedDescription">Reflect attacks done on Magic Mirrors.[nl]Then, unleash them towards evils!</string>
+  <string name="Eclipse.Role.Mirrorcaster.TabDescription">Protect a player with a Magic Mirror.[nl]If they are directly attacked, then[nl]unleash the attack onto another player!</string>
+  <string name="Eclipse.Role.Mirrorcaster.TabProtecting">Protecting: &lt;player&gt;</string>
+  <string name="Eclipse.Role.Mirrorcaster.WikiDescription">The Mirrorcaster is a Crewmate Protective role that can cast a Magic Mirror on a player to protect them. If attacked directly, the Mirrorcaster can then unleash onto another player.</string>
+  <string name="Eclipse.Button.MirrorcasterMagicMirror">Magic Mirror</string>
+  <string name="Eclipse.Button.MirrorcasterMagicMirrorProtecting">Protecting</string>
+  <string name="Eclipse.Button.MirrorcasterUnleash">Unleash</string>
+  <string name="Eclipse.Role.Mirrorcaster.TargetDiedNotif">&lt;player&gt; died to an indirect attack, which your mirrors couldn't protect from.</string>
+  <string name="Eclipse.Role.Mirrorcaster.TargetDidNotDieNotif">&lt;player&gt; was not attacked.</string>
+  <string name="Eclipse.Role.Mirrorcaster.AttackedMessageWithType">&lt;player&gt; was attacked by the &lt;attackerRole&gt;! You can now unleash the attack onto another player!</string>
+  <string name="Eclipse.Role.Mirrorcaster.AttackedMessageWithoutType">&lt;player&gt; was attacked! You can now unleash the attack onto another player!</string>
+  <string name="Eclipse.Role.Mirrorcaster.AttackedMessageWithFaction">&lt;player&gt; was attacked by a &lt;faction&gt;! You can now unleash the attack onto another player!</string>
+  <string name="Eclipse.Role.Mirrorcaster.AttackedMessageWithSubalignment">&lt;player&gt; was attacked by a &lt;subalignment&gt;! You can now unleash the attack onto another player!</string>
+<!-- Mirrorcaster Options -->
+  <string name="Eclipse.Option.Mirrorcaster.WhoGetsNotification">Who Gets Murder Attempt Indicator</string>
+  <string name="Eclipse.Option.Mirrorcaster.NotifEnum.Mirrorcaster">Mirrorcaster</string>
+  <string name="Eclipse.Option.Mirrorcaster.NotifEnum.MirrorcasterAndKiller">Mirrorcaster + Killer</string>
+  <string name="Eclipse.Option.Mirrorcaster.MirrorCooldown">Magic Mirror Cooldown</string>
+  <string name="Eclipse.Option.Mirrorcaster.MirrorDuration">Magic Mirror Duration</string>
+  <string name="Eclipse.Option.Mirrorcaster.UnleashCooldown">Unleash Cooldown</string>
+  <string name="Eclipse.Option.Mirrorcaster.AttackInformationGiven">Information Received Upon Attack</string>
+  <string name="Eclipse.Option.Mirrorcaster.InfoEnum.Role">Role</string>
+  <string name="Eclipse.Option.Mirrorcaster.InfoEnum.Subalignment">Subalignment</string>
+  <string name="Eclipse.Option.Mirrorcaster.InfoEnum.Faction">Faction</string>
+  <string name="Eclipse.Option.Mirrorcaster.InfoEnum.Nothing">Nothing</string>
+  <string name="Eclipse.Option.Mirrorcaster.AccumulateMultipleUnleashes">Accumulate Multiple Unleashes</string>
+  <string name="Eclipse.Option.Mirrorcaster.MaxMirrors">Max Number Of Magic Mirrors</string>
 </resources>

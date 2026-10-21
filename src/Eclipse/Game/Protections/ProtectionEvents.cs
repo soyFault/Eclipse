@@ -3,6 +3,7 @@ using Eclipse.Networking;
 using MiraAPI.Events;
 using MiraAPI.Events.Mira;
 using MiraAPI.Events.Vanilla.Gameplay;
+using MiraAPI.Events.Vanilla.Meeting;
 using MiraAPI.Events.Vanilla.Player;
 using MiraAPI.Hud;
 
@@ -69,6 +70,13 @@ internal static class ProtectionEvents
 
         Protections.Ledger.RemoveTarget(leaver.PlayerId);
         Protections.Ledger.RemoveProtector(leaver.PlayerId);
+    }
+
+    // A barrier does not last into a meeting. Every game ends them by itself (a fortification, on the other hand, does last).
+    [RegisterEvent]
+    public static void OnStartMeeting(StartMeetingEvent meeting)
+    {
+        Protections.Ledger.RemoveKind(ProtectionKind.Barrier);
     }
 
     // A new match starts with no protections.

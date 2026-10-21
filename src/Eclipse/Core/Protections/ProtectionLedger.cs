@@ -6,6 +6,7 @@ namespace Eclipse.Core;
 internal enum ProtectionKind : byte
 {
     Fortify = 0,
+    Barrier = 1,
 }
 
 internal readonly record struct Protection(ProtectionKind Kind, byte ProtectorId, byte TargetId, double ExpiresAt);

@@ -22,7 +22,7 @@ internal static class WardenRpcs
     [MethodRpc((uint)EclipseRpc.InteractionBlocked, LocalHandling = RpcLocalHandling.Before)]
     public static void RpcInteractionBlocked(PlayerControl source, byte kind, PlayerControl protector, PlayerControl target, bool wasAttack)
     {
-        if (LobbyBehaviour.Instance || source == null || protector == null || target == null || kind > (byte)ProtectionKind.Fortify)
+        if (LobbyBehaviour.Instance || source == null || protector == null || target == null || kind > (byte)ProtectionKind.Barrier)
         {
             return;
         }
