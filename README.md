@@ -1,3 +1,8 @@
+> [!NOTA]\
+> Este repo es un mod en constante desarrollo y a la fecha de escritura de este ReadMe, cuenta con varios assets ajenos y propios como placeholders que serán cambiados eventualmente. (porque no tengo el permiso de usarlos o porque son dev-art que se ve mal intencionalmente)\
+> Los mods mencionados en los créditos son perfectamente jugables y Eclipse no busca reemplazar a ninguno, diría incluso que son alternativas mejores con equipos de desarrollo dedicados y comunidades más activas. Yo quiero hacer un espacio en Español, para jugadores en español y mayor accesibilidad al público hispanohablante en términos de sugerencias, funciones, ideas, etc. así que si decides no usar Eclipse por cualquier razón, está bien.\
+> Este mod está disponible para PC (Steam/Epíc/MS Store) y próximamente Android (cuando haya una versión estable). No es de tipo host-only así que todos los que vayan a jugar el mod deben tenerlo instalado.
+
 # ECLIPSE
 Colección de roles y modificadores de diversos mods que me gustan y con soporte total en Español, comunidad activa de jugadores y constante desarrollo.
 
