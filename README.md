@@ -1,9 +1,12 @@
 > [!NOTE]
-> Este repo es un mod en constante desarrollo y a la fecha de escritura de este ReadMe, cuenta con varios assets ajenos y propios como placeholders que serán cambiados eventualmente. (porque no tengo el permiso de usarlos o porque son dev-art que se ve mal intencionalmente)
+> Este repo es un mod en constante desarrollo y mucha arte y botones son placeholders.\
+> Está programado con asistencia de IA, específicamente Claude Code. Ni el arte, ni los sonidos son generados, únicamente como apoyo en coding. Si no estás cómodo con esto, por favor, prueba otros mods.
 
+> [!NOTE]
 > Los mods mencionados en los créditos son perfectamente jugables y Eclipse no busca reemplazar a ninguno, diría incluso que son alternativas mejores con equipos de desarrollo dedicados y comunidades más activas. Yo quiero hacer un espacio en Español, para jugadores en español y mayor accesibilidad al público hispanohablante en términos de sugerencias, funciones, ideas, etc. así que si decides no usar Eclipse por cualquier razón, está bien.
 
-> Este mod está disponible para PC (Steam/Epic Games/MS Store) y próximamente Android (cuando haya una versión estable). No es de tipo host-only así que todos los que vayan a jugar el mod deben tenerlo instalado. Para ver el estado del desarrollo, revisa STATUS.md
+> [!NOTE]
+> Este mod está disponible para PC (Steam/Epic Games/MS Store) y próximamente Android (cuando haya una versión estable). No es de tipo host-only así que todos los que vayan a jugar el mod deben tenerlo instalado. Para ver el estado del desarrollo, revisa [STATUS.md](/STATUS.md)
 
 # ECLIPSE
 Colección de roles y modificadores de diversos mods que me gustan y con soporte total en Español, comunidad activa de jugadores y constante desarrollo.

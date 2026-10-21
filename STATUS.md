@@ -3,6 +3,8 @@
 - Roles (en progreso)
 - Modificadores (aún no agregados)
 - Funciones (en progreso)
+- Comsméticos personalizados (aún no empezado)
+- Integración con Voice Chat (aún no empezado)
 
 ## Roles (testeados y funcionando correctamente)
 
