@@ -194,6 +194,11 @@
   <string name="Eclipse.Modifier.Drunk.Description">Tus movimientos están invertidos.</string>
   <string name="Eclipse.Option.Universal.DrunkAmount">Jugadores con Borracho</string>
   <string name="Eclipse.Option.Universal.DrunkChance">Probabilidad de Borracho</string>
+<!-- Sabueso -->
+  <string name="Eclipse.Modifier.Sleuth">Sabueso</string>
+  <string name="Eclipse.Modifier.Sleuth.Description">Descubres el rol de los cuerpos que reportas.</string>
+  <string name="Eclipse.Option.Universal.SleuthAmount">Jugadores con Sabueso</string>
+  <string name="Eclipse.Option.Universal.SleuthChance">Probabilidad de Sabueso</string>
 
   <!-- Sensorial -->
   <string name="Eclipse.Role.Aurial">Sensorial</string>
