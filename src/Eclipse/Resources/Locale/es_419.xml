@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <!-- Intro -->
+  <string name="Eclipse.Intro.Modifier">Modificador</string>
+  <string name="Eclipse.Intro.Modifiers">Modificadores</string>
+  <string name="Eclipse.Intro.Neutral.Title">Neutral</string>
+  <string name="Eclipse.Intro.Neutral.Description">Juegas por tu cuenta.</string>
+
+  <!-- Resumen -->
+  <string name="Eclipse.Local.Section.Summary">Resumen de la partida</string>
+  <string name="Eclipse.Local.EndSummary">Resumen en la pantalla final</string>
+  <string name="Eclipse.Local.SummaryHidden">Oculto</string>
+  <string name="Eclipse.Local.SummaryLeft">Arriba a la izquierda</string>
+  <string name="Eclipse.Summary.Alive">Sobrevivió</string>
+  <string name="Eclipse.Summary.Killed">Asesinado</string>
+  <string name="Eclipse.Summary.Exiled">Expulsado</string>
+  <string name="Eclipse.Summary.Disconnected">Salió de la partida</string>
+  <string name="Eclipse.Summary.Died">Murió</string>
+  <string name="Eclipse.Summary.Winner">★</string>
+
+  <!-- Freeplay -->
+  <string name="Eclipse.Options.Host">Sala (anfitrión)</string>
+  <string name="Eclipse.Option.Host.MultiplayerFreeplay">Herramientas de Freeplay multijugador</string>
+  <string name="Eclipse.Option.Host.FreeplayHostOnly">Solo el anfitrión puede usar las herramientas</string>
+  <string name="Eclipse.Option.Host.FreeplayNoEnd">La partida no termina sola</string>
+
   <!-- Ajustes locales (solo para la partida de este jugador) -->
+  <string name="Eclipse.Options.VanillaTweaks">Ajustes del juego base</string>
+  <string name="Eclipse.Option.Tweak.HideNames">Ocultar nombres fuera de la vista</string>
+  <string name="Eclipse.Option.Tweak.HideNames.Basic">No</string>
+  <string name="Eclipse.Option.Tweak.HideNames.RoomBased">Solo en la misma sala</string>
+  <string name="Eclipse.Option.Tweak.HideNames.Harsh">Solo a la vista</string>
   <string name="Eclipse.Local.Players">Jugadores</string>
   <string name="Eclipse.Local.Section.Visuals">Apariencia</string>
   <string name="Eclipse.Local.RoleNameStyle">Estilo del nombre del rol</string>
@@ -10,6 +39,22 @@
   <string name="Eclipse.Local.NameStyleBottomSmall">Abajo (pequeño)</string>
   <string name="Eclipse.Local.ShowRoleIcons">Mostrar ícono junto al nombre</string>
   <string name="Eclipse.Local.ColorPlayerNames">Colorear nombres</string>
+  <string name="Eclipse.Local.Preferences">Preferencias</string>
+  <string name="Eclipse.Options.RoundStart">Inicio de la partida</string>
+  <string name="Eclipse.Option.RoundStart.FirstDeathShield">Escudo para el primer jugador asesinado de la partida anterior</string>
+  <string name="Eclipse.FirstRound.Mark">(escudo)</string>
+  <string name="Eclipse.FirstRound.Notice">Moriste primero en la partida anterior: nadie puede matarte hasta la primera reunión.</string>
+
+  <!-- Preferencias / Auto Unirse -->
+  <string name="Eclipse.Local.Section.EndGame">Fin de la partida</string>
+  <string name="Eclipse.Local.AutoRejoin">Volver al lobby automáticamente</string>
+  <string name="Eclipse.Local.RejoinNever">Nunca</string>
+  <string name="Eclipse.Local.RejoinAlways">Siempre</string>
+  <string name="Eclipse.Local.RejoinHost">Solo como anfitrión</string>
+  <string name="Eclipse.Local.RejoinClient">Solo como cliente</string>
+  <string name="Eclipse.Local.AutoRejoinDelay">Segundos antes de volver</string>
+  <string name="Eclipse.Local.RejoinCountdown">Volviendo al lobby en {0} s</string>
+
   <!-- Alineaciones -->
   <string name="Eclipse.Alignment.CrewInvestigative">Tripulante Investigativo</string>
   <string name="Eclipse.Alignment.CrewInvestigative.Group">TRIPULANTES INVESTIGATIVOS</string>

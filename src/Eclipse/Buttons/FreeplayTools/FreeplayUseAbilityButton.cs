@@ -24,7 +24,7 @@ internal sealed class FreeplayUseAbilityButton : CustomActionButton
 
     public override bool Enabled(RoleBehaviour? role)
     {
-        return TutorialManager.InstanceExists;
+        return FreeplayState.IsActive;
     }
 
     protected override void OnClick()

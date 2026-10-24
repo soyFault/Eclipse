@@ -29,23 +29,6 @@ internal sealed class FreeplayResetButton : CustomActionButton
 
     protected override void OnClick()
     {
-        var snapshot = PlayerControl.AllPlayerControls.ToArray()
-            .Where(p => p != null && p.Data?.Role != null)
-            .Select(p => (Player: p, Role: p.Data.Role.Role))
-            .ToArray();
-
-        HudManager.Instance.ShowPopUp(MiraLocaleManager.Get("Eclipse.Freeplay.ResetPopup"));
-        ShipStatus.Instance.Begin();
-        if (GameManager.Instance)
-        {
-            GameManager.Instance.ReviveEveryoneFreeplay();
-        }
-
-        foreach (var (player, role) in snapshot)
-        {
-            RoleChanger.ChangeRole(player, role);
-        }
-
-        Logger<EclipsePlugin>.Info($"Freeplay reset: {snapshot.Length} role(s) handed out again.");
+       FreeplayActions.Reset();
     }
 }

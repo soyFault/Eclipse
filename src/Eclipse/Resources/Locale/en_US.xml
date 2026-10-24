@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!-- Intro -->
+  <string name="Eclipse.Intro.Modifier">Modifier</string>
+  <string name="Eclipse.Intro.Modifiers">Modifiers</string>
+  <string name="Eclipse.Intro.Neutral.Title">Neutral</string>
+  <string name="Eclipse.Intro.Neutral.Description">You play for yourself.</string>
+
+<!-- Freeplay -->
+  <string name="Eclipse.Options.Host">Lobby (host)</string>
+  <string name="Eclipse.Option.Host.MultiplayerFreeplay">Multiplayer Freeplay tools</string>
+  <string name="Eclipse.Option.Host.FreeplayHostOnly">Only the host can use the tools</string>
+  <string name="Eclipse.Option.Host.FreeplayNoEnd">The match does not end by itself</string>
+
+<!-- Summary -->
+  <string name="Eclipse.Local.Section.Summary">Match summary</string>
+  <string name="Eclipse.Local.EndSummary">Summary on the end screen</string>
+  <string name="Eclipse.Local.SummaryHidden">Hidden</string>
+  <string name="Eclipse.Local.SummaryLeft">Top left</string>
+  <string name="Eclipse.Summary.Alive">Survived</string>
+  <string name="Eclipse.Summary.Killed">Killed</string>
+  <string name="Eclipse.Summary.Exiled">Ejected</string>
+  <string name="Eclipse.Summary.Disconnected">Left the game</string>
+  <string name="Eclipse.Summary.Died">Died</string>
+  <string name="Eclipse.Summary.Winner">★</string>
+
   <!-- Local settings -->
+  <string name="Eclipse.Options.VanillaTweaks">Vanilla tweaks</string>
+  <string name="Eclipse.Option.Tweak.HideNames">Hide names out of sight</string>
+  <string name="Eclipse.Option.Tweak.HideNames.Basic">Off</string>
+  <string name="Eclipse.Option.Tweak.HideNames.RoomBased">Same room only</string>
+  <string name="Eclipse.Option.Tweak.HideNames.Harsh">In sight only</string>
+
   <string name="Eclipse.Local.Players">Players</string>
   <string name="Eclipse.Local.Section.Visuals">Visuals</string>
   <string name="Eclipse.Local.RoleNameStyle">Role name style</string>
@@ -10,6 +40,22 @@
   <string name="Eclipse.Local.NameStyleBottomSmall">Bottom (small)</string>
   <string name="Eclipse.Local.ShowRoleIcons">Show role icons on player names</string>
   <string name="Eclipse.Local.ColorPlayerNames">Color player names with their role's color</string>
+  <string name="Eclipse.Local.Preferences">Preferences</string>
+  <string name="Eclipse.Options.RoundStart">Start of the match</string>
+  <string name="Eclipse.Option.RoundStart.FirstDeathShield">Shield for the first player killed in the last match</string>
+  <string name="Eclipse.FirstRound.Mark">(shield)</string>
+  <string name="Eclipse.FirstRound.Notice">You died first last match: nobody can kill you until the first meeting.</string>
+
+  <!-- Preferences / Autorejoin-->
+  <string name="Eclipse.Local.Section.EndGame">End of the match</string>
+  <string name="Eclipse.Local.AutoRejoin">Rejoin the lobby by itself</string>
+  <string name="Eclipse.Local.RejoinNever">Never</string>
+  <string name="Eclipse.Local.RejoinAlways">Always</string>
+  <string name="Eclipse.Local.RejoinHost">Only as host</string>
+  <string name="Eclipse.Local.RejoinClient">Only as client</string>
+  <string name="Eclipse.Local.AutoRejoinDelay">Seconds before rejoining</string>
+  <string name="Eclipse.Local.RejoinCountdown">Rejoining in {0} s</string>
+
   <!-- Alignments -->
   <string name="Eclipse.Alignment.CrewInvestigative">Crewmate Investigative</string>
   <string name="Eclipse.Alignment.CrewInvestigative.Group">Crewmate Investigative Roles</string>
@@ -51,7 +97,7 @@
   <string name="Eclipse.Alignment.NeutralAfterlife.Group">Neutral Afterlife Roles</string>
   <string name="Eclipse.Alignment.NeutralGhost">Neutral Ghost</string>
   <string name="Eclipse.Alignment.NeutralGhost.Group">Neutral Ghost Roles</string>
-<!-- Freeplay Tools-->
+
   <!-- Herramientas de Freeplay-->
   <string name="Eclipse.Freeplay.SetRole">Give Role</string>
   <string name="Eclipse.Freeplay.GiveShield">Give Shield</string>
@@ -60,6 +106,7 @@
   <string name="Eclipse.Freeplay.UseAbility">Use Ability</string>
   <string name="Eclipse.Freeplay.Reset">Restart Game</string>
   <string name="Eclipse.Freeplay.ResetPopup">Game restarted. Everyone revived and kept their roles.</string>
+
 <!-- Aurial -->
   <string name="Eclipse.Role.Aurial">Aurial</string>
   <string name="Eclipse.Role.Aurial.IntroBlurb">Sense disturbances in your aura.</string>
@@ -71,6 +118,7 @@ If done very close, you can see the source's color.</string>
   <string name="Eclipse.Option.Aurial.AuraInnerRadius">Radiate Color Range</string>
   <string name="Eclipse.Option.Aurial.AuraOuterRadius">Radiate Max Range</string>
   <string name="Eclipse.Option.Aurial.SenseDuration">Sense Duration</string>
+
  <!-- Sheriff -->
   <string name="Eclipse.Role.Sheriff">Sheriff</string>
   <string name="Eclipse.Button.SheriffShoot">Shoot</string>

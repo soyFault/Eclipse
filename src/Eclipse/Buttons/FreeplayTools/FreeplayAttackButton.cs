@@ -1,7 +1,7 @@
 using Eclipse.Assets;
 using Eclipse.Freeplay;
 using MiraAPI.Hud;
-using MiraAPI.Networking;
+using Eclipse.Game;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
 
@@ -52,7 +52,7 @@ internal sealed class FreeplayAttackButton : EclipseActionButton
                         victimMenu.ForceClose();
                         if (victim != null)
                         {
-                            attacker.RpcCustomMurder(victim, MeetingCheck.OutsideMeeting);
+                            FreeplayActions.Attack(attacker, victim);
                         }
                     });
             });

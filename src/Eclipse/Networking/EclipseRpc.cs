@@ -18,4 +18,10 @@ internal enum EclipseRpc : uint
     MirrorClear = 11,
     MirrorHit = 12,
     MirrorUnleash = 13,
+    FreeplayRequest = 15,
+    FreeplayRole = 16,
+    FreeplayRevive = 17,
+    FreeplayResetState = 18,
+    FreeplayRestore = 19,
+    FirstRoundShield = 20,
 }

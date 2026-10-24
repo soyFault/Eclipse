@@ -4,14 +4,8 @@ using MiraAPI.Roles;
 
 namespace Eclipse.Api.Roles;
 
-/// <summary>
-///
-/// </summary>
 public interface IEclipseRole : ICustomRole
 {
-    /// <summary>
-    ///
-    /// </summary>
     AlignmentDefinition Alignment { get; }
 
     ModdedRoleTeams ICustomRole.Team => Alignment.Faction.ToModdedTeam();
@@ -19,4 +13,8 @@ public interface IEclipseRole : ICustomRole
     RoleOptionsGroup ICustomRole.RoleOptionsGroup => Alignment.OptionsGroup;
 
     string ICustomRole.RoleFactionTitle => Alignment.DisplayName;
+
+    TeamIntroConfiguration? ICustomRole.IntroConfiguration => Alignment.Faction == Faction.Neutral
+        ? new TeamIntroConfiguration(FactionColors.Neutral, "Eclipse.Intro.Neutral.Title", "Eclipse.Intro.Neutral.Description")
+        : null;
 }

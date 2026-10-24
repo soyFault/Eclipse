@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Eclipse.Core;
+using Eclipse.Api.Factions;
+using MiraAPI.Roles;
 using MiraAPI.Utilities.Assets;
 using Reactor.Utilities;
 using TMPro;
@@ -16,6 +18,8 @@ internal static class EclipseAssets
     private static readonly Dictionary<string, TMP_SpriteAsset?> RoleTextIcons = [];
     private static readonly Dictionary<string, LoadableAsset<Sprite>> ButtonIcons = [];
     private static readonly Dictionary<string, LoadableAsset<Sprite>?> ModifierIcons = [];
+    private static readonly Dictionary<string, LoadableAsset<Sprite>?> TabIcons = [];
+    private static readonly Dictionary<string, LoadableAsset<AudioClip>> IntroSounds = [];
     private static LoadableAsset<Sprite>? _firstRoundLock;
     private static bool _firstRoundLockLooked;
     private static LoadableAsset<Sprite>? _commsLock;
@@ -98,12 +102,32 @@ internal static class EclipseAssets
         }
     }
 
+    private sealed class BundleAudio(string folder, string key) : LoadableAsset<AudioClip>
+    {
+        public override AudioClip LoadAsset()
+        {
+            return LoadedAsset ??= EclipseBundle.Find<AudioClip>(folder, key) ?? throw new InvalidOperationException($"INVALID ASSET: {folder}/{key}");
+        }
+    }
+
     public static LoadableAsset<Sprite> SpriteIcon(string key, LoadableAsset<Sprite> placeholder)
     {
         if (!ButtonIcons.TryGetValue("sprites/" + key, out var icon))
         {
             icon = EclipseBundle.Has(BundleArt.SpritesFolder, key) ? new BundleSprite(BundleArt.SpritesFolder, key) : placeholder;
             ButtonIcons["sprites/" + key] = icon;
+        }
+
+        return icon;
+    }
+
+    public static LoadableAsset<Sprite>? LocalTabIcon(string name)
+    {
+        if (!TabIcons.TryGetValue(name, out var icon))
+        {
+            var key = "LocalTab" + name;
+            icon = EclipseBundle.Has(BundleArt.UiFolder, key) ? new BundleSprite(BundleArt.UiFolder, key) : null;
+            TabIcons[name] = icon;
         }
 
         return icon;
@@ -140,6 +164,17 @@ internal static class EclipseAssets
     {
         return EclipseBundle.Has(BundleArt.SpritesFolder, "Footprint") ? new BundleSprite(BundleArt.SpritesFolder, "Footprint") : null;
     }
+    public static LoadableAsset<AudioClip> IntroSound(string idPart, Faction faction)
+    {
+        var key = "Intro" + idPart;
+        if (!IntroSounds.TryGetValue(key, out var sound))
+        {
+            sound = EclipseBundle.Has(BundleArt.AudioFolder, key)
+                ? new BundleAudio(BundleArt.AudioFolder, key)
+                : faction == Faction.Crewmate ? CustomRoleManager.CrewmateIntroSound : CustomRoleManager.ImpostorIntroSound;
+            IntroSounds[key] = sound;
+        }
 
-
+        return sound;
+    }
 }

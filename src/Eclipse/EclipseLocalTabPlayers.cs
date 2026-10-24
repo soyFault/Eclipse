@@ -1,4 +1,5 @@
 using BepInEx.Configuration;
+using Eclipse.Assets;
 using Eclipse.Core;
 using MiraAPI.LocalSettings;
 using MiraAPI.LocalSettings.Attributes;
@@ -12,6 +13,12 @@ internal sealed class EclipseLocalTabPlayers(ConfigFile config) : LocalSettingsT
     public override string TabName => "Eclipse.Local.Players";
 
     protected override bool ShouldCreateLabels => true;
+
+    public override LocalSettingTabAppearance TabAppearance => new()
+    {
+        TabIcon = EclipseAssets.LocalTabIcon("Players"),
+        HideIconOnHover = false,
+    };
 
     [LocalEnumSetting(names: ["Eclipse.Local.NameStyleTop", "Eclipse.Local.NameStyleTopSmall", "Eclipse.Local.NameStyleBottom", "Eclipse.Local.NameStyleBottomSmall"])]
     public ConfigEntry<RoleNameStyle> RoleNameStyle { get; private set; } =

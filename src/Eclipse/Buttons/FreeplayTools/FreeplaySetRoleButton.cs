@@ -49,7 +49,7 @@ internal sealed class FreeplaySetRoleButton : EclipseActionButton
 
                 RolePickerMenu.Open(role =>
                 {
-                    RoleChanger.ChangeRole(chosen, role.Role);
+                    FreeplayActions.SetRole(chosen, role.Role);
                 });
             });
     }

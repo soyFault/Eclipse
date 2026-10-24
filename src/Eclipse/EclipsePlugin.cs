@@ -37,11 +37,13 @@ public partial class EclipsePlugin : BasePlugin, IMiraPlugin
         Harmony.PatchAll();
         LocalTick.Register(Mirrors.Tick);
         NameDecorations.Register(Mirrors.MirrorMark);
+        NameDecorations.Register(FirstRoundShield.Mark);
         LocalTick.Register(Protections.Tick);
         RoleLabels.RegisterReveal(SnitchEvents.SnitchRoleIsPublic);
         NameColors.Register(SnitchEvents.NameColor);
         LocalTick.Register(SnitchEvents.Tick);
         LocalTick.Register(Footprints.Tick);
+        LocalTick.Register(NameSightTweak.Tick);
         Log.LogInfo($"{Name} {Version} cargado.");
         EclipseBundle.Report();
     }
