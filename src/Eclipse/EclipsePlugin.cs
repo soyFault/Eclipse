@@ -40,10 +40,12 @@ public partial class EclipsePlugin : BasePlugin, IMiraPlugin
         NameDecorations.Register(FirstRoundShield.Mark);
         LocalTick.Register(Protections.Tick);
         RoleLabels.RegisterReveal(SnitchEvents.SnitchRoleIsPublic);
+        RoleLabels.RegisterReveal(SleuthEvents.SleuthSees);
         NameColors.Register(SnitchEvents.NameColor);
         LocalTick.Register(SnitchEvents.Tick);
         LocalTick.Register(Footprints.Tick);
         LocalTick.Register(NameSightTweak.Tick);
+        ChatCommandSetup.RegisterAll();
         Log.LogInfo($"{Name} {Version} cargado.");
         EclipseBundle.Report();
     }

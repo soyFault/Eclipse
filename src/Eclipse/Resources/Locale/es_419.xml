@@ -23,6 +23,8 @@
   <string name="Eclipse.Option.Host.MultiplayerFreeplay">Herramientas de Freeplay multijugador</string>
   <string name="Eclipse.Option.Host.FreeplayHostOnly">Solo el anfitrión puede usar las herramientas</string>
   <string name="Eclipse.Option.Host.FreeplayNoEnd">La partida no termina sola</string>
+  <string name="Eclipse.Freeplay.SetModifier">Dar Modificador</string>
+  <string name="Eclipse.Freeplay.ModifierKind">Universal</string>
 
   <!-- Ajustes locales (solo para la partida de este jugador) -->
   <string name="Eclipse.Options.VanillaTweaks">Ajustes del juego base</string>
@@ -54,6 +56,49 @@
   <string name="Eclipse.Local.RejoinClient">Solo como cliente</string>
   <string name="Eclipse.Local.AutoRejoinDelay">Segundos antes de volver</string>
   <string name="Eclipse.Local.RejoinCountdown">Volviendo al lobby en {0} s</string>
+
+  <!-- Tweaks -->
+  <string name="Eclipse.Option.Tweak.TickCooldownsInMinigame">Los tiempos de espera siguen corriendo dentro de una tarea</string>
+  <string name="Eclipse.Option.Tweak.ParallelMedbay">Varios jugadores pueden escanear a la vez</string>
+  <string name="Eclipse.Option.Tweak.MedscanWalk">Caminata de Scan</string>
+  <string name="Eclipse.Option.Tweak.SkipButton">Ocultar Skip</string>
+  <string name="Eclipse.Option.Tweak.SkipButton.Never">Nunca</string>
+  <string name="Eclipse.Option.Tweak.SkipButton.Emergency">Reuniones</string>
+  <string name="Eclipse.Option.Tweak.SkipButton.Always">Siempre</string>
+  <string name="Eclipse.Option.Tweak.HideVentAnimation">Ocultar Animación de Ductos</string>
+
+  <!-- Comandos -->
+  <string name="Eclipse.Chat.System">Sistema</string>
+  <string name="Eclipse.Command.Unknown">Comando desconocido. Escribe /ayuda.</string>
+  <string name="Eclipse.Command.HostOnly">Solo el anfitrión puede usar ese comando.</string>
+  <string name="Eclipse.Command.Remove.NotFound">Ningún jugador único coincide con «&lt;name&gt;».</string>
+  <string name="Eclipse.Command.Help.Names">ayuda:help:h</string>
+  <string name="Eclipse.Command.Help.Description">Lista los comandos.</string>
+  <string name="Eclipse.Command.Help.Title">Comandos:</string>
+  <string name="Eclipse.Command.Summary.Names">resumen:summary</string>
+  <string name="Eclipse.Command.Summary.Description">Muestra el resumen de la última partida.</string>
+  <string name="Eclipse.Command.Summary.None">Todavía no hay resumen.</string>
+  <string name="Eclipse.Command.Roles.Names">roles</string>
+  <string name="Eclipse.Command.Roles.Description">Lista los roles de esta partida.</string>
+  <string name="Eclipse.Command.Roles.None">No hay roles especiales activados.</string>
+  <string name="Eclipse.Faction.Crewmate">Tripulantes</string>
+  <string name="Eclipse.Faction.Impostor">Impostores</string>
+  <string name="Eclipse.Faction.Neutral">Neutrales</string>
+  <string name="Eclipse.Command.Info.Names">info</string>
+  <string name="Eclipse.Command.Info.Description">Explica un rol: /info &lt;rol&gt;.</string>
+  <string name="Eclipse.Command.Info.Usage">Uso: /info &lt;nombre del rol&gt;</string>
+  <string name="Eclipse.Command.Info.NotFound">Ningún rol único coincide con «&lt;name&gt;».</string>
+  <string name="Eclipse.Command.Name.Names">nombre:name</string>
+  <string name="Eclipse.Command.Name.Description">Cambia tu nombre en la sala: /nombre &lt;nombre&gt;.</string>
+  <string name="Eclipse.Command.Name.LobbyOnly">Solo puedes cambiar tu nombre en la sala.</string>
+  <string name="Eclipse.Command.Name.Invalid">El nombre debe tener de 1 a 12 caracteres y nadie más puede usarlo.</string>
+  <string name="Eclipse.Command.Name.Done">Tu nombre ahora es &lt;name&gt;.</string>
+  <string name="Eclipse.Command.Kick.Names">expulsar:kick</string>
+  <string name="Eclipse.Command.Kick.Description">Expulsa a un jugador: /expulsar &lt;nombre&gt;.</string>
+  <string name="Eclipse.Command.Kick.Done">&lt;name&gt; fue expulsado.</string>
+  <string name="Eclipse.Command.Ban.Names">vetar:ban</string>
+  <string name="Eclipse.Command.Ban.Description">Veta a un jugador: /vetar &lt;nombre&gt;.</string>
+  <string name="Eclipse.Command.Ban.Done">&lt;name&gt; fue vetado.</string>
 
   <!-- Alineaciones -->
   <string name="Eclipse.Alignment.CrewInvestigative">Tripulante Investigativo</string>
@@ -104,6 +149,52 @@
   <string name="Eclipse.Freeplay.UseAbility">Usar Habilidad</string>
   <string name="Eclipse.Freeplay.Reset">Reiniciar partida</string>
   <string name="Eclipse.Freeplay.ResetPopup">Partida reiniciada. Todos revivieron y conservan su rol.</string>
+
+<!-- Modificadores -->
+  <string name="Eclipse.Options.Universal">Modificadores universales</string>
+  <!-- Flash -->
+  <string name="Eclipse.Modifier.Flash">Flash</string>
+  <string name="Eclipse.Modifier.Flash.Description">Caminas más rápido que todos.</string>
+  <string name="Eclipse.Option.Universal.FlashAmount">Jugadores con Flash</string>
+  <string name="Eclipse.Option.Universal.FlashChance">Probabilidad de Flash</string>
+  <string name="Eclipse.Option.Universal.FlashSpeed">Velocidad de Flash</string>
+  <!-- Gigante -->
+  <string name="Eclipse.Modifier.Giant">Gigante</string>
+  <string name="Eclipse.Modifier.Giant.Description">Eres más grande y más lento.</string>
+  <string name="Eclipse.Option.Universal.GiantAmount">Jugadores con Gigante</string>
+  <string name="Eclipse.Option.Universal.GiantChance">Probabilidad de Gigante</string>
+  <string name="Eclipse.Option.Universal.GiantSpeed">Velocidad de Gigante</string>
+  <!-- Mini -->
+  <string name="Eclipse.Modifier.Mini">Mini</string>
+  <string name="Eclipse.Modifier.Mini.Description">Eres diminuto y rápido.</string>
+  <string name="Eclipse.Option.Universal.MiniAmount">Jugadores con Mini</string>
+  <string name="Eclipse.Option.Universal.MiniChance">Probabilidad de Mini</string>
+  <string name="Eclipse.Option.Universal.MiniSpeed">Velocidad de Mini</string>
+  <!-- Sexto Sentido-->
+  <string name="Eclipse.Modifier.SixthSense">Sexto Sentido</string>
+  <string name="Eclipse.Modifier.SixthSense.Description">Sientes cuando alguien está por matarte.</string>
+  <string name="Eclipse.Option.Universal.SixthSenseAmount">Jugadores con Sexto Sentido</string>
+  <string name="Eclipse.Option.Universal.SixthSenseChance">Probabilidad de Sexto Sentido</string>
+<!-- Desempate -->
+  <string name="Eclipse.Modifier.Tiebreaker">Desempate</string>
+  <string name="Eclipse.Modifier.Tiebreaker.Description">Tu voto cuenta doble si hay empate.</string>
+  <string name="Eclipse.Option.Universal.TiebreakerChance">Probabilidad de Desempate</string>
+  <!-- Beto Botón -->
+  <string name="Eclipse.Modifier.ButtonBarry">Beto Botón</string>
+  <string name="Eclipse.Modifier.ButtonBarry.Description">Puedes llamar a una reunión desde cualquier lugar.</string>
+  <string name="Eclipse.Option.Universal.ButtonBarryChance">Probabilidad de Beto Botón</string>
+  <string name="Eclipse.Button.ButtonBarry">Reunión</string>
+  <string name="Eclipse.Options.ButtonBarry">Beto Botón</string>
+  <string name="Eclipse.Option.ButtonBarry.Cooldown">Espera del Beto Botón</string>
+  <string name="Eclipse.Option.ButtonBarry.MaxUses">Usos del Beto Botón</string>
+  <string name="Eclipse.Option.ButtonBarry.IgnoreSabotage">Puede llamar durante un sabotaje</string>
+  <string name="Eclipse.Option.ButtonBarry.FirstRound">Puede llamar en la primera ronda</string>
+<!-- Borracho -->
+  <string name="Eclipse.Modifier.Drunk">Borracho</string>
+  <string name="Eclipse.Modifier.Drunk.Description">Tus movimientos están invertidos.</string>
+  <string name="Eclipse.Option.Universal.DrunkAmount">Jugadores con Borracho</string>
+  <string name="Eclipse.Option.Universal.DrunkChance">Probabilidad de Borracho</string>
+
   <!-- Sensorial -->
   <string name="Eclipse.Role.Aurial">Sensorial</string>
   <string name="Eclipse.Role.Aurial.IntroBlurb">Siente las perturbaciones en tu aura.</string>

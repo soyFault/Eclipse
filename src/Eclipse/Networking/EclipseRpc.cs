@@ -24,4 +24,6 @@ internal enum EclipseRpc : uint
     FreeplayResetState = 18,
     FreeplayRestore = 19,
     FirstRoundShield = 20,
+    ButtonBarry = 21,
+    SixthSense = 22,
 }
