@@ -47,6 +47,7 @@ public partial class EclipsePlugin : BasePlugin, IMiraPlugin
         LocalTick.Register(SnitchEvents.Tick);
         LocalTick.Register(Footprints.Tick);
         LocalTick.Register(NameSightTweak.Tick);
+        LocalTick.Register(JesterEvents.Tick);
         ChatCommandSetup.RegisterAll();
         Log.LogInfo($"{Name} {Version} cargado.");
         EclipseBundle.Report();

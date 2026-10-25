@@ -59,7 +59,8 @@ internal sealed record SummaryLine(
     int Round,
     int TasksDone,
     int TasksTotal,
-    bool Winner);
+    bool Winner,
+    string RoleIcon = "");
 
 internal sealed record SummaryLabels(string Alive, string Killed, string Exiled, string Disconnected, string Died, string Winner);
 
@@ -74,6 +75,7 @@ internal static class SummaryFormatter
         }
 
         builder.Append("<color=#").Append(line.NameColor).Append('>').Append(line.Name).Append("</color> - ");
+        builder.Append(line.RoleIcon.Length > 0 ? line.RoleIcon + " " : string.Empty);
         builder.Append("<color=#").Append(line.RoleColor).Append('>').Append(line.RoleName).Append("</color> - ");
         builder.Append(FateText(line, labels));
         if (line.TasksTotal > 0)

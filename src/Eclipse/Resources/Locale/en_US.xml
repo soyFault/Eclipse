@@ -159,6 +159,22 @@
   <string name="Eclipse.Freeplay.Reset">Restart Game</string>
   <string name="Eclipse.Freeplay.ResetPopup">Game restarted. Everyone revived and kept their roles.</string>
 
+  <!-- Texto de la pestaña de tareas de los neutrales -->
+  <string name="Eclipse.TabText.Benign">You cannot win by yourself.
+    Optional Tasks:</string>
+  <string name="Eclipse.TabText.Evil">You must complete your goal at all costs.
+    Fake Tasks:</string>
+  <string name="Eclipse.TabText.Killing">Eliminate all other teams by any means.
+    Fake Tasks:</string>
+  <string name="Eclipse.TabText.Outlier">You must complete your objective to win.
+    Fake Tasks:</string>
+  <string name="Eclipse.TabText.Won">Objective complete! The match goes on.</string>
+  <string name="Eclipse.TabText.DeadWon">You died, but you have won. Just wait for the match to end.</string>
+  <string name="Eclipse.TabText.Dead">You're dead. Sit back and enjoy the chaos.</string>
+  <string name="Eclipse.Role.NeutralGhost">Neutral Ghost</string>
+  <string name="Eclipse.Role.NeutralGhost.TabDead">You died. Sit back and enjoy the chaos.</string>
+  <string name="Eclipse.Role.NeutralGhost.TabWon">You died, but you have won. Just wait for the match to end.</string>
+
 <!-- Modifiers -->
 
   <string name="Eclipse.Options.Universal">Universal modifiers</string>
@@ -463,4 +479,23 @@ If done very close, you can see the source's color.</string>
   <string name="Eclipse.Option.Mirrorcaster.InfoEnum.Nothing">Nothing</string>
   <string name="Eclipse.Option.Mirrorcaster.AccumulateMultipleUnleashes">Accumulate Multiple Unleashes</string>
   <string name="Eclipse.Option.Mirrorcaster.MaxMirrors">Max Number Of Magic Mirrors</string>
+
+  <!-- Jester -->
+  <string name="Eclipse.Role.Jester">Jester</string>
+  <string name="Eclipse.Role.Jester.IntroBlurb">Get yourself voted out!</string>
+  <string name="Eclipse.Role.Jester.MedDescription">Be as suspicious as possible, and get voted out!</string>
+  <string name="Eclipse.Role.Jester.TabDescription">Be as suspicious as possible, and get voted out!</string>
+  <string name="Eclipse.Role.Jester.WikiDescription">The Jester is a Neutral Evil role that wins by getting themselves ejected. Depending on the setting, the match then ends, or goes on and the Jester can haunt one of the players who voted for them.</string>
+  <string name="Eclipse.Button.JesterHaunt">Haunt</string>
+  <string name="Eclipse.Role.Jester.WinOwner">You have successfully won as the Jester, by getting voted out!</string>
+  <string name="Eclipse.Role.Jester.HauntOwner">You have one round to haunt a player of your choice to death, choose wisely!</string>
+  <string name="Eclipse.Role.Jester.WinGlobal">The Jester, &lt;player&gt;, has successfully won, as they were voted out!</string>
+  <string name="Eclipse.Role.Jester.HauntNotif">The Jester has decided to haunt &lt;victim&gt; beyond the grave!</string>
+  <string name="Eclipse.Option.Jester.CanButton">Can Use Button</string>
+  <string name="Eclipse.Option.Jester.AfterWin">After Win Type</string>
+  <string name="Eclipse.Option.Jester.AfterWin.EndsGame">Ends Game</string>
+  <string name="Eclipse.Option.Jester.AfterWin.Haunts">Haunts</string>
+  <string name="Eclipse.Option.Jester.AfterWin.Nothing">Nothing</string>
+  <string name="Eclipse.Option.Jester.AnnounceWin">Notify Others On Win</string>
+  <string name="Eclipse.GameOver.SoloWin">&lt;role&gt; Wins!</string>
 </resources>

@@ -1,8 +1,10 @@
 using Eclipse.Core;
+using MiraAPI.PluginLoading;
 using UnityEngine;
 
 namespace Eclipse.Modifiers;
 
+[MiraIgnore]
 internal abstract class BodyModifier : UniversalModifier
 {
     protected abstract float SpeedMultiplier { get; }
