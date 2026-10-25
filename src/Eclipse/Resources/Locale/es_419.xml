@@ -159,13 +159,13 @@
 
   <!-- Texto de la pestaña de tareas de los neutrales -->
   <string name="Eclipse.TabText.Benign">No puedes ganar por tu cuenta.
-    Tareas opcionales:</string>
+Tareas opcionales:</string>
   <string name="Eclipse.TabText.Evil">Debes completar tu objetivo a toda costa.
-    Tareas falsas:</string>
+Tareas falsas:</string>
   <string name="Eclipse.TabText.Killing">Elimina a los demás equipos por cualquier medio.
-    Tareas falsas:</string>
+Tareas falsas:</string>
   <string name="Eclipse.TabText.Outlier">Debes completar tu objetivo para ganar.
-    Tareas falsas:</string>
+Tareas falsas:</string>
   <string name="Eclipse.TabText.Won">¡Objetivo cumplido! La partida continúa.</string>
   <string name="Eclipse.TabText.DeadWon">Moriste, pero ganaste. Solo queda esperar a que termine la partida.</string>
   <string name="Eclipse.TabText.Dead">Moriste. Siéntate y disfruta del caos.</string>

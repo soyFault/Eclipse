@@ -161,13 +161,13 @@
 
   <!-- Texto de la pestaña de tareas de los neutrales -->
   <string name="Eclipse.TabText.Benign">You cannot win by yourself.
-    Optional Tasks:</string>
+Optional Tasks:</string>
   <string name="Eclipse.TabText.Evil">You must complete your goal at all costs.
-    Fake Tasks:</string>
+Fake Tasks:</string>
   <string name="Eclipse.TabText.Killing">Eliminate all other teams by any means.
-    Fake Tasks:</string>
+Fake Tasks:</string>
   <string name="Eclipse.TabText.Outlier">You must complete your objective to win.
-    Fake Tasks:</string>
+Fake Tasks:</string>
   <string name="Eclipse.TabText.Won">Objective complete! The match goes on.</string>
   <string name="Eclipse.TabText.DeadWon">You died, but you have won. Just wait for the match to end.</string>
   <string name="Eclipse.TabText.Dead">You're dead. Sit back and enjoy the chaos.</string>
