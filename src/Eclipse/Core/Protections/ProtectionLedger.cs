@@ -7,6 +7,8 @@ internal enum ProtectionKind : byte
 {
     Fortify = 0,
     Barrier = 1,
+    Vest = 2,
+    Guardian = 3,
 }
 
 internal readonly record struct Protection(ProtectionKind Kind, byte ProtectorId, byte TargetId, double ExpiresAt);
@@ -29,11 +31,11 @@ internal sealed class ProtectionLedger
         _items.Add(new Protection(kind, protectorId, targetId, expiresAt));
     }
 
-    public Protection? BlockerOf(byte targetId, double now)
+    public Protection? BlockerOf(byte targetId, double now, bool isAttack = true)
     {
         foreach (var item in _items)
         {
-            if (item.TargetId == targetId && item.ExpiresAt > now)
+            if (item.TargetId == targetId && item.ExpiresAt > now && ProtectionRules.StopsInteraction(item.Kind, isAttack))
             {
                 return item;
             }

@@ -13,8 +13,7 @@ namespace Eclipse.Game;
 
 internal static class Protections
 {
-    // Where a barrier sits, in the player's cosmetics layer (TOUM's AnimStore.SpawnAnimBody(player, prefab, false, -1.1, -0.35, 1.5): y is -0.35 + 0.05
-    // of the bounce holder, and z is the depth). Each kind of protection has its own prefab and playing speed.
+
     private const float BarrierY = -0.30f;
     private const float BarrierZ = 1.5f;
 
@@ -30,15 +29,13 @@ internal static class Protections
 
     public static double Now => Time.timeAsDouble;
 
-    // Finds the protection that stops source from interacting with target right now.
-    public static Protection? Blocker(PlayerControl source, PlayerControl target, bool ignoresDefense)
+    public static Protection? Blocker(PlayerControl source, PlayerControl target, bool ignoresDefense, bool isAttack = true)
     {
-        var blocker = Ledger.BlockerOf(target.PlayerId, Now);
+        var blocker = Ledger.BlockerOf(target.PlayerId, Now, isAttack);
         var blocks = ShieldRules.Blocks(blocker != null, source.PlayerId, target.PlayerId, ignoresDefense, MeetingHud.Instance || ExileController.Instance);
         return blocks ? blocker : null;
     }
 
-    // A message from the game that decided it: the attacker and the protector see a flash, and an attacker stopped on a murder recovers their kill state.
     public static void OnBlocked(ProtectionKind kind, PlayerControl source, PlayerControl protector, bool wasAttack)
     {
         if (source.AmOwner || (protector.AmOwner && ProtectionRules.NotifiesProtector(kind, OptionGroupSingleton<ClericOptions>.Instance.AttackNotification)))
@@ -58,7 +55,6 @@ internal static class Protections
         SyncVisuals();
     }
 
-    // Registered as a local tick: forgets what ran out and keeps what is drawn on the protected players up to date.
     public static void Tick(float deltaTime)
     {
         Ledger.Prune(Now);
@@ -67,7 +63,13 @@ internal static class Protections
 
     private static Color ColorOf(ProtectionKind kind)
     {
-        return kind == ProtectionKind.Barrier ? EclipseColors.Cleric : EclipseColors.Warden;
+        return kind switch
+        {
+            ProtectionKind.Barrier => EclipseColors.Cleric,
+            ProtectionKind.Vest => EclipseColors.Survivor,
+            ProtectionKind.Guardian => EclipseColors.Fairy,
+            _ => EclipseColors.Warden,
+        };
     }
 
     private static void SyncVisuals()
@@ -124,7 +126,6 @@ internal static class Protections
                 Visuals[key] = visual;
             }
 
-            // The barrier must not give away a hidden player: it goes away with them (in a vent) and when they die.
             visual.Update(player, !player.inVent && !player.Data.IsDead);
         }
     }
@@ -145,7 +146,6 @@ internal static class Protections
                 return new Visual(null, []);
             }
 
-            // Like TOUM: born under the player with the prefab's own scale, then hung from a holder in the cosmetics layer so it is drawn with the body.
             var barrier = Object.Instantiate(prefab, player.transform);
             barrier.name = "Eclipse" + prefabName;
             var playerScale = player.transform.localScale;

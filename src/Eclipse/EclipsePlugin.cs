@@ -2,6 +2,7 @@ using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
 using Eclipse.Assets;
+using Eclipse.Core;
 using Eclipse.Api.Alignments;
 using Eclipse.Game;
 using HarmonyLib;
@@ -38,6 +39,7 @@ public partial class EclipsePlugin : BasePlugin, IMiraPlugin
         LocalTick.Register(Mirrors.Tick);
         NameDecorations.Register(Mirrors.MirrorMark);
         NameDecorations.Register(FirstRoundShield.Mark);
+        MatchReset.Register(Targets.Reset);
         LocalTick.Register(Protections.Tick);
         RoleLabels.RegisterReveal(SnitchEvents.SnitchRoleIsPublic);
         RoleLabels.RegisterReveal(SleuthEvents.SleuthSees);

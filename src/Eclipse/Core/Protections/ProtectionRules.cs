@@ -25,7 +25,17 @@ internal static class ProtectionRules
 
     public static bool NotifiesProtector(ProtectionKind kind, bool barrierAttackNotification)
     {
-        return kind != ProtectionKind.Barrier || barrierAttackNotification;
+        return kind switch
+        {
+            ProtectionKind.Barrier => barrierAttackNotification,
+            ProtectionKind.Vest or ProtectionKind.Guardian => false,
+            _ => true,
+        };
+    }
+
+    public static bool StopsInteraction(ProtectionKind kind, bool isAttack)
+    {
+        return isAttack || kind != ProtectionKind.Guardian;
     }
 
     public static bool CanFortify(bool alreadyFortifying)

@@ -3,7 +3,6 @@ namespace Eclipse.Networking;
 
 internal enum EclipseRpc : uint
 {
-
     AurialSense = 0,
     SheriffMisfired = 1,
     MedicShield = 2,
@@ -26,4 +25,16 @@ internal enum EclipseRpc : uint
     FirstRoundShield = 20,
     ButtonBarry = 21,
     SixthSense = 22,
+    JesterHaunt = 23,
+    PokeDetected = 24,
+    SurvivorVest = 25,
+    AmnesiacRemember = 26,
+    MercenaryBribe = 27,
+    MercenaryGuard = 28,
+    MercenaryGuarded = 29,
+    NeutralTarget = 30,
+    NeutralBecome = 31,
+    ExecutionerWon = 32,
+    ExecutionerTorment = 33,
+    FairyProtect = 34,
 }

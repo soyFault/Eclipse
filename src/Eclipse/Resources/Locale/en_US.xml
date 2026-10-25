@@ -6,6 +6,13 @@
   <string name="Eclipse.Intro.Neutral.Title">Neutral</string>
   <string name="Eclipse.Intro.Neutral.Description">You play for yourself.</string>
 
+  <!-- Becomes -->
+  <string name="Eclipse.Option.Become.Crew">Crewmate</string>
+  <string name="Eclipse.Option.Become.Amnesiac">Amnesiac</string>
+  <string name="Eclipse.Option.Become.Survivor">Survivor</string>
+  <string name="Eclipse.Option.Become.Mercenary">Mercenary</string>
+  <string name="Eclipse.Option.Become.Jester">Jester</string>
+
 <!-- Freeplay -->
   <string name="Eclipse.Options.Host">Lobby (host)</string>
   <string name="Eclipse.Option.Host.MultiplayerFreeplay">Multiplayer Freeplay tools</string>

@@ -1,3 +1,4 @@
+using Eclipse.Buttons;
 using Eclipse.Core;
 using Eclipse.Networking;
 using MiraAPI.Events;
@@ -11,8 +12,6 @@ namespace Eclipse.Game;
 
 internal static class ProtectionEvents
 {
-    // Stops the click of ANY button that targets a protected player (not only attacks, unlike the Medic's shield), BEFORE the button does anything.
-    // It runs after the Medic's shield check (priority -900), so a click the shield already stopped is not reported twice.
     [RegisterEvent(-800)]
     public static void OnButtonClick(MiraButtonClickEvent click)
     {
@@ -23,23 +22,21 @@ internal static class ProtectionEvents
 
         var target = button.Target;
         var local = PlayerControl.LocalPlayer;
-        if (target == null || !button.CanClick() || Protections.Blocker(local, target, false) is not { } blocker)
+        if (target == null || !button.CanClick() || Protections.Blocker(local, target, false, button is IKillButton) is not { } blocker)
         {
             return;
         }
 
         click.Cancel();
 
-        // The short cooldown also stops a player from getting through by clicking very fast.
         button.SetTimer(ShieldGuard.BlockedCooldown);
         Announce(blocker, local, target, false);
     }
 
-    // Stops a murder (a vanilla Impostor kill, a custom murder from any mod) on a protected player. Only the HOST announces it, so it is reported once.
     [RegisterEvent(-800)]
     public static void OnBeforeMurder(BeforeMurderEvent murder)
     {
-        if (murder.IsCancelled || Protections.Blocker(murder.Source, murder.Target, murder.IgnoreDefense) is not { } blocker)
+        if (murder.IsCancelled || Protections.Blocker(murder.Source, murder.Target, murder.IgnoreDefense, true) is not { } blocker)
         {
             return;
         }
@@ -51,15 +48,14 @@ internal static class ProtectionEvents
         }
     }
 
-    // A protection cannot outlive the player it protects, and a Warden's fortification cannot outlive the Warden. Every game does this by itself.
     [RegisterEvent]
     public static void OnPlayerDeath(PlayerDeathEvent death)
     {
         Protections.Ledger.RemoveTarget(death.Player.PlayerId);
         Protections.Ledger.RemoveProtector(death.Player.PlayerId, ProtectionKind.Fortify);
+        Protections.Ledger.RemoveProtector(death.Player.PlayerId, ProtectionKind.Guardian);
     }
 
-    // A player that leaves takes with them every protection they gave or had.
     [RegisterEvent]
     public static void OnPlayerLeave(PlayerLeaveEvent leave)
     {
@@ -72,14 +68,14 @@ internal static class ProtectionEvents
         Protections.Ledger.RemoveProtector(leaver.PlayerId);
     }
 
-    // A barrier does not last into a meeting. Every game ends them by itself (a fortification, on the other hand, does last).
     [RegisterEvent]
     public static void OnStartMeeting(StartMeetingEvent meeting)
     {
         Protections.Ledger.RemoveKind(ProtectionKind.Barrier);
+        Protections.Ledger.RemoveKind(ProtectionKind.Vest);
+        Protections.Ledger.RemoveKind(ProtectionKind.Guardian);
     }
 
-    // A new match starts with no protections.
     [RegisterEvent(-1)]
     public static void OnRoundStart(RoundStartEvent roundStart)
     {

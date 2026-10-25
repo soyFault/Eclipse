@@ -6,6 +6,13 @@
   <string name="Eclipse.Intro.Neutral.Title">Neutral</string>
   <string name="Eclipse.Intro.Neutral.Description">Juegas por tu cuenta.</string>
 
+  <!-- Se convierte en -->
+  <string name="Eclipse.Option.Become.Crew">Tripulante</string>
+  <string name="Eclipse.Option.Become.Amnesiac">Amnésico</string>
+  <string name="Eclipse.Option.Become.Survivor">Sobreviviente</string>
+  <string name="Eclipse.Option.Become.Mercenary">Mercenario</string>
+  <string name="Eclipse.Option.Become.Jester">Bufón</string>
+
   <!-- Resumen -->
   <string name="Eclipse.Local.Section.Summary">Resumen de la partida</string>
   <string name="Eclipse.Local.EndSummary">Resumen en la pantalla final</string>
