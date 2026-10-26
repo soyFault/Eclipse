@@ -25,10 +25,14 @@ internal sealed class MedicShieldModifier : BaseModifier
     private const float ShieldScale = 0.6f;
     private const float DepthScale = 0.18f;
 
+    // Where the second shield is on the orbit compared with the first one: half a turn, so they are always on opposite sides and never touch.
+    private const float SecondShieldPhase = Mathf.PI;
+
     private readonly ShieldMedics _medics = new();
     private GameObject? _bubble;
     private SpriteRenderer[] _bubbleRenderers = [];
     private Transform? _shield;
+    private Transform? _shield2;
 
     public MedicShieldModifier(PlayerControl medic)
     {
@@ -89,6 +93,7 @@ internal sealed class MedicShieldModifier : BaseModifier
 
         // The aura (MedicShieldBack) animates itself with the game's SpriteAnim. The shield is moved by FixedUpdate below.
         _shield = _bubble.transform.Find("MedicShieldOrbit/Shield");
+        _shield2 = _bubble.transform.Find("MedicShieldOrbit/Shield2");
 
         _bubble.SetActive(ShowsBubble());
     }
@@ -103,6 +108,7 @@ internal sealed class MedicShieldModifier : BaseModifier
         _bubble = null;
         _bubbleRenderers = [];
         _shield = null;
+        _shield2 = null;
     }
 
     private bool ShowsBubble()
@@ -116,6 +122,19 @@ internal sealed class MedicShieldModifier : BaseModifier
         return local.Data.IsDead || (Player.AmOwner && ShieldedKnows) || _medics.Contains(local.PlayerId);
     }
 
+    private static void PlaceOnOrbit(Transform? shield, float angle)
+    {
+        if (shield == null)
+        {
+            return;
+        }
+
+        var sin = Mathf.Sin(angle);
+        var scale = ShieldScale * (1f - DepthScale * sin);
+        shield.localPosition = new Vector3(OrbitRadiusX * Mathf.Cos(angle), OrbitCenterY + OrbitRadiusY * sin, sin > 0f ? 0.00006f : -0.00005f);
+        shield.localScale = new Vector3(scale, scale, 1f);
+    }
+
     public override void FixedUpdate()
     {
         if (_medics.IsEmpty)
@@ -126,14 +145,9 @@ internal sealed class MedicShieldModifier : BaseModifier
 
         if (_bubble != null && !MeetingHud.Instance)
         {
-            if (_shield != null)
-            {
-                var angle = Time.time * (2f * Mathf.PI / OrbitSeconds);
-                var sin = Mathf.Sin(angle);
-                var scale = ShieldScale * (1f - DepthScale * sin);
-                _shield.localPosition = new Vector3(OrbitRadiusX * Mathf.Cos(angle), OrbitCenterY + OrbitRadiusY * sin, sin > 0f ? 0.00006f : -0.00005f);
-                _shield.localScale = new Vector3(scale, scale, 1f);
-            }
+            var angle = Time.time * (2f * Mathf.PI / OrbitSeconds);
+            PlaceOnOrbit(_shield, angle);
+            PlaceOnOrbit(_shield2, angle + SecondShieldPhase);
 
             _bubble.SetActive(ShowsBubble());
             var flip = Player.cosmetics.FlipX;

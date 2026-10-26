@@ -20,7 +20,7 @@ internal static class Protections
     private static readonly Dictionary<ProtectionKind, (string Prefab, float Speed)> Looks = new()
     {
         [ProtectionKind.Fortify] = ("WardenFort", 0.75f),
-        [ProtectionKind.Barrier] = ("ClericBarrier", 2f),
+        [ProtectionKind.Barrier] = ("ClericBarrier", 1f),
     };
 
     private static readonly Dictionary<(ProtectionKind, byte, byte), Visual> Visuals = [];
